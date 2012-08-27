@@ -10,8 +10,8 @@
 
 @interface LVController (Private)
 
-- (void)sendData:(NSData *)data;
-- (void)sendMessage:(LiveViewMessageType)msg withInteger:(int)integer;
+- (void)sendData:(void *)data length:(int)length;
+- (void)sendMessage:(LiveViewMessageType)type withInteger:(uint8_t)integer;
 - (void)handleScreenStatus;
 - (void)handleMusicAction;
 
@@ -207,15 +207,15 @@
 - (void)processData:(void *)dataPointer length:(size_t)dataLength {
     while (dataLength >= sizeof(LVMessageHeader)) {
         LVMessage *message = (LVMessage *)dataPointer;
-        LVMessageHeader *header = &message->header;
-        uint32_t receivedLength = OSSwapInt32(header->length); // Reverse endianness
+        LVMessageHeader header = message->header;
+        uint32_t receivedLength = OSSwapInt32(header.length); // Reverse endianness
         if (receivedLength > dataLength) receivedLength = dataLength-sizeof(LVMessageHeader); // Prevent possible buffer underflow
         
-        if (header->headerlength == 4) {
-            NSLog(@"Received message %d with data ", header->type);
+        if (header.headerlength == 4) {
+            NSLog(@"Received message %d with data ", header.type);
             hexdump(&message->data, receivedLength);
             @try {
-                [self handleLiveViewMessage:header->type withData:[NSData dataWithBytes:&message->data length:receivedLength]];
+                [self handleLiveViewMessage:header.type withData:[NSData dataWithBytes:&message->data length:receivedLength]];
             }
             @catch (NSException *exception) {
                 NSLog(@"Message handler exception! Ignoring...");
@@ -264,44 +264,49 @@
 
 #pragma Data sending
 
-- (void)sendData:(NSData *)data {
-	NSData *packet;
+- (void)sendData:(void *)data length:(int)length {
     int packetLength;
     
     int channelMTU = channel_mtu;
-	int remainingData = [data length];
+	int remainingData = length;
     
     if (channelMTU) {
         while(remainingData) {
             packetLength = (remainingData > channelMTU) ? channelMTU : remainingData;
             
-            packet = [data subdataWithRange:NSMakeRange(0, packetLength)];
-            if (remainingData -= packetLength)
-                data = [data subdataWithRange:NSMakeRange(packetLength, remainingData)];
+            LVSendRawData(data, packetLength);
+            NSLog(@"Wrote %d bytes.", packetLength);
             
-            LVSendRawData((uint8_t *)[packet bytes], [packet length]);
-            NSLog(@"Wrote %d bytes.",[packet length]);
+            remainingData -= packetLength;
+            data += packetLength;
         }
     }
 }
 
-- (void)sendMessage:(LiveViewMessageType)msg withData:(NSData *)data {
-	//NSLog(@"Sending message %d with data %@.", msg, data);
-	NSMutableData *output = [[NSMutableData alloc] init];
-	[output appendint8:msg];
-	[output appendint8:4];
-	[output appendBEint32:[data length]];
-	[output appendData:data];
-	[self sendData:output];
-    NSLog(@"Sending message %d with data %@.", msg, output);
-    [output release];
+- (void)sendMessage:(LiveViewMessageType)type withData:(const void *)data length:(int)length {    
+    int payloadLength = sizeof(LVMessageHeader)+length;
+    
+    LVMessage *message = malloc(payloadLength);
+    LVMessageHeader *header = &message->header;
+    
+    header->type = type;
+    header->headerlength = 4;
+    header->length = OSSwapInt32(length);
+    memcpy(&message->data, data, length);
+    
+    [self sendData:message length:payloadLength];
+    
+    free(message);
 }
 
-- (void)sendMessage:(LiveViewMessageType)msg withInteger:(int)integer {
-	NSMutableData *output = [[NSMutableData alloc] init];
-	[output serializeWithFormat:@">B", integer];
-	[self sendMessage:msg withData:output];
-    [output release];
+- (void)sendMessage:(LiveViewMessageType)type withData:(NSData *)data {
+    NSLog(@"Sending message %d with data %@.", type, data);
+
+	[self sendMessage:type withData:[data bytes] length:[data length]];
+}
+
+- (void)sendMessage:(LiveViewMessageType)type withInteger:(uint8_t)integer {
+    [self sendMessage:type withData:&integer length:1];
 }
 
 #pragma Messages
