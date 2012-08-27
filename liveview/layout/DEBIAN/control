@@ -1,0 +1,9 @@
+Package: com.ariweinstein.liveview
+Name: LiveView
+Depends: mobilesubstrate, ch.ringwald.btstack
+Version: 1.0
+Architecture: iphoneos-arm
+Description: LiveView for iOS
+Maintainer: Ari Weinstein
+Author: Ari Weinstein
+Section: Tweaks

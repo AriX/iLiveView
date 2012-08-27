@@ -1,0 +1,55 @@
+In file included from /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:9:
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h:18:29: error: btstack/btstack.h: No such file or directory
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'addr'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:45: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'con_handle'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController stop]':
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:62: warning: implicit declaration of function 'bt_close'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController runBluetooth]':
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: warning: implicit declaration of function 'sscan_bd_addr'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: error: 'addr' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: error: (Each undeclared identifier is reported only once
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: error: for each function it appears in.)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:74: warning: implicit declaration of function 'run_loop_init'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:74: error: 'RUN_LOOP_POSIX' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:75: warning: implicit declaration of function 'bt_open'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:81: warning: implicit declaration of function 'print_bd_addr'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:83: warning: implicit declaration of function 'bt_register_packet_handler'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:84: warning: implicit declaration of function 'bt_send_cmd'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:84: error: 'btstack_set_power_mode' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:84: error: 'HCI_POWER_ON' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:85: warning: implicit declaration of function 'run_loop_execute'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController handleLiveViewMessage:withData:]':
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:97: warning: unused variable 'sc'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:97: warning: unused variable 'sb'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:97: warning: unused variable 'sa'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:96: warning: unused variable 'menuId'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:95: warning: unused variable 'navigation'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:94: warning: unused variable 'c'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:93: warning: unused variable 'number'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function 'rfcomm_send_packet':
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:381: warning: implicit declaration of function 'crc8_calc'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:382: warning: implicit declaration of function 'bt_send_l2cap'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function 'packet_handler':
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:426: error: 'bd_addr_t' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:426: error: expected ';' before 'event_addr'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:436: error: 'L2CAP_DATA_PACKET' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:487: warning: implicit declaration of function 'hexdump'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:546: error: 'HCI_EVENT_PACKET' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:550: error: 'BTSTACK_EVENT_POWERON_FAILED' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:556: error: 'BTSTACK_EVENT_STATE' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:558: error: 'HCI_STATE_WORKING' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:559: error: 'hci_write_authentication_enable' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:563: error: 'HCI_EVENT_LINK_KEY_REQUEST' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:565: warning: implicit declaration of function 'bt_flip_addr'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:565: error: 'event_addr' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:566: error: 'hci_link_key_request_negative_reply' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:569: error: 'HCI_EVENT_PIN_CODE_REQUEST' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:572: error: 'hci_pin_code_request_reply' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:577: error: 'L2CAP_EVENT_CHANNEL_OPENED' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:580: warning: implicit declaration of function 'READ_BT_16'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:582: error: 'con_handle' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:600: error: 'HCI_EVENT_DISCONNECTION_COMPLETE' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:606: error: 'HCI_EVENT_COMMAND_COMPLETE' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:608: warning: implicit declaration of function 'COMMAND_COMPLETE_EVENT'
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:609: error: 'l2cap_create_channel' undeclared (first use in this function)
+/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:609: error: 'addr' undeclared (first use in this function)

@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = LiveViewSettings;
+	cell = PSLinkCell;
+	detail = LiveViewSettingsListController;
+	icon = Icon.png;
+	isController = 1;
+	label = LiveView;
+    };
+}

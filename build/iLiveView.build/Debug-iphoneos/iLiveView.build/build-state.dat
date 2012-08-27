@@ -1,0 +1,817 @@
+TiLiveView
+v7
+r0
+t323202327.229869
+cCheck dependencies
+cCpResource build/Debug-iphoneos/iLiveView.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+cProcessInfoPlistFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/Info.plist iLiveView-Info.plist
+cCompileXIB /Users/Ari/dev/iLiveView/MainWindow.xib
+cCompileXIB /Users/Ari/dev/iLiveView/iLiveViewViewController.xib
+cCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/logprevu.png logprevu.png
+cCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPause.png MusicPause.png
+cCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPlay.png MusicPlay.png
+cCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/fail.png fail.png
+cCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/success.png success.png
+cProcessPCH /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-dnjuvgapwrwczebkahozzawpovzo/iLiveView_Prefix.pch.gch iLiveView_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-akzbdgfcnsifkebdzyjpbogrdzfl/iLiveView_Prefix.pch.gch iLiveView_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/main.o /Users/Ari/dev/iLiveView/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewAppDelegate.o /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewViewController.o /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/NSMutableData+endian.o /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/main.o /Users/Ari/dev/iLiveView/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewAppDelegate.o /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewViewController.o /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/NSMutableData+endian.o /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveView normal armv7
+cLd /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveView normal armv6
+cCreateUniversalBinary /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView normal "armv6 armv7"
+cGenerateDSYMFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app.dSYM /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView
+cProcessProductPackaging "/Users/Ari/Library/MobileDevice/Provisioning Profiles/43CBFDEC-53BB-4213-825A-42E6BD979D3B.mobileprovision" /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/embedded.mobileprovision
+cTouch /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView.xcent
+cCodeSign /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk
+c000000004CC7DC9E0000000000000110
+t1288166558
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
+c000000004CB3DFCF00000000000001A7
+t1286856655
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+c000000004CB3DFCF00000000000001E5
+t1286856655
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC10EF500000000003532B0
+t1287720693
+s3486384
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC10F4700000000003E1F20
+t1287720775
+s4071200
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC10F1C0000000000001466
+t1287720732
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h
+c000000004C23A0120000000000012048
+t1277403154
+s73800
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOMessage.h
+c000000004C2399460000000000000DE0
+t1277401414
+s3552
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/IOKit.framework/Headers/pwr_mgt/IOPMLib.h
+c000000004C23A0110000000000006CA0
+t1277403153
+s27808
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/IOKit.framework/IOKit
+c000000004CC10DE500000000000CF740
+t1287720421
+s849728
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.h
+c000000004CC247E70000000000000294
+t1287800807
+s660
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c000000004CC2483E000000000038CF50
+t1287800894
+s3723088
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC11AE60000000000000AA1
+t1287723750
+s2721
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC11B750000000000C769F0
+t1287723893
+s13068784
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/btstack/btstack.h
+c000000004D8F7DDB0000000000000B21
+t1301249499
+s2849
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/errno.h
+c000000004CB3E4B800000000000003EB
+t1286857912
+s1003
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/fcntl.h
+c000000004CB3E4B800000000000003EA
+t1286857912
+s1002
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/stdio.h
+c000000004CB3E4B800000000000040AC
+t1286857912
+s16556
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/stdlib.h
+c000000004CB3E4B80000000000002DF5
+t1286857912
+s11765
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/string.h
+c000000004CB3E4B80000000000001731
+t1286857912
+s5937
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/strings.h
+c000000004CB3E4B80000000000000DA4
+t1286857912
+s3492
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/sys/stat.h
+c000000004CBFACD80000000000004A1D
+t1287630040
+s18973
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/sys/types.h
+c000000004CBFACD90000000000002905
+t1287630041
+s10501
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/unistd.h
+c000000004CB3E4B8000000000000563E
+t1286857912
+s22078
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/LiveView.h
+c000000004D968DE600000000000009D0
+t1301712358
+s2512
+i<unistd.h>
+i<stdio.h>
+i<stdlib.h>
+i<strings.h>
+i<errno.h>
+i<string.h>
+i<fcntl.h>
+i<sys/types.h>
+i<sys/stat.h>
+i<btstack/btstack.h>
+i<MediaPlayer/MediaPlayer.h>
+i"NSMutableData+endian.h"
+i"LiveViewConstants.h"
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/LiveViewConstants.h
+c000000004D9669520000000000000E25
+t1301702994
+s3621
+i<UIKit/UIKit.h>
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/NSMutableData+endian.h
+c000000004D939657000000000000028D
+t1301517911
+s653
+i<Foundation/Foundation.h>
+
+N/Users/Ari/Library/MobileDevice/Provisioning Profiles/43CBFDEC-53BB-4213-825A-42E6BD979D3B.mobileprovision
+c000000004D8D06120000000000001D69
+t1301087762
+s7529
+
+N/Users/Ari/Library/MobileDevice/Provisioning Profiles/BB11F5FE-90C6-4519-B254-7052FE96B754.mobileprovision
+c000000004D9E0EB40000000000001DA5
+t1302204084
+s7589
+
+N/Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LiveView.h
+c000000004D968DE600000000000009D0
+t1301712358
+s2512
+i<unistd.h>
+i<stdio.h>
+i<stdlib.h>
+i<strings.h>
+i<errno.h>
+i<string.h>
+i<fcntl.h>
+i<sys/types.h>
+i<sys/stat.h>
+i<btstack/btstack.h>
+i<MediaPlayer/MediaPlayer.h>
+i"NSMutableData+endian.h"
+i"LiveViewConstants.h"
+
+N/Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LiveView.m
+c000000004D968DDB0000000000003AB1
+t1301712347
+s15025
+i"LiveView.h"
+
+N/Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LiveViewRFCOMM.m
+c000000004D966CFC0000000000002B92
+t1301703932
+s11154
+i"LiveView.h"
+
+N/Users/Ari/dev/iLiveView/Classes/LiveViewCallback.h
+c000000004D90952C000000000000086E
+t1301321004
+s2158
+i<Foundation/Foundation.h>
+
+N/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.h
+c000000004D939657000000000000028D
+t1301517911
+s653
+i<Foundation/Foundation.h>
+
+N/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m
+c000000004D8FF82600000000000012E6
+t1301280806
+s4838
+i"NSMutableData+endian.h"
+
+N/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.h
+c000000004D908E5200000000000001E0
+t1301319250
+s480
+i<UIKit/UIKit.h>
+
+N/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m
+c000000004D920FDD0000000000000A93
+t1301417949
+s2707
+i"iLiveViewAppDelegate.h"
+i"iLiveViewViewController.h"
+
+N/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h
+c000000004D9678AF00000000000003D7
+t1301706927
+s983
+i"LiveView.h"
+
+N/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m
+c000000004D968E2B00000000000010CD
+t1301712427
+s4301
+i"iLiveViewViewController.h"
+
+N/Users/Ari/dev/iLiveView/MainWindow.xib
+c000000004D908E520000000000004E41
+t1301319250
+s20033
+
+N/Users/Ari/dev/iLiveView/MusicPause.png
+c0000000012A4AE40000000000000043C
+t312782400
+s1084
+
+N/Users/Ari/dev/iLiveView/MusicPlay.png
+c0000000012A4AE4000000000000003F8
+t312782400
+s1016
+
+N/Users/Ari/dev/iLiveView/Plus.png
+c0000000044BC8A060000000000000052
+t1153206790
+s82
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app
+t1301509527
+s544
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app.dSYM
+t1301509526
+s102
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/Info.plist
+t1301412584
+s789
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MainWindow.nib
+t1301412584
+s1127
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPause.png
+t1301451717
+s1084
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPlay.png
+t1301451717
+s1016
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/PkgInfo
+t1301412584
+s8
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/Plus.png
+t1301413540
+s82
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/ResourceRules.plist
+t1301412584
+s485
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/embedded.mobileprovision
+t1301412586
+s7529
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/fail.png
+t1301454531
+s1563
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView
+t1301509526
+s117328
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveViewViewController.nib
+t1301457113
+s3863
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/jerry_music_pause_icn.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/jerry_music_play_icn.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/logprevu.png
+t1301412584
+s885
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/music.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/success.png
+t1301454531
+s1571
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/LiveView.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/LiveViewRFCOMM.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/NSMutableData+endian.o
+t1301412586
+s21620
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveView
+t1301509526
+s50264
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveView.LinkFileList
+c000000004D91FAE800000000000001DB
+t1301412584
+s475
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewAppDelegate.o
+t1301506403
+s51320
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewViewController.o
+t1301509526
+s95328
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/main.o
+t1301412586
+s6420
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/LiveView.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/LiveViewRFCOMM.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/NSMutableData+endian.o
+t1301412586
+s18212
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveView
+t1301509526
+s49820
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveView.LinkFileList
+c000000004D91FAE800000000000001DB
+t1301412584
+s475
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewAppDelegate.o
+t1301506404
+s51240
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewViewController.o
+t1301509526
+s92844
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/main.o
+t1301412586
+s6404
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView.xcent
+t1301412586
+s424
+
+N/Users/Ari/dev/iLiveView/fail.png
+c000000004D7FF4A4000000000000061B
+t1300231332
+s1563
+
+N/Users/Ari/dev/iLiveView/iLiveViewViewController.xib
+c000000004D96791A000000000000CBCB
+t1301707034
+s52171
+
+N/Users/Ari/dev/iLiveView/iLiveView_Prefix.pch
+c000000004D908E5200000000000000BB
+t1301319250
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/Ari/dev/iLiveView/jerry_music_pause_icn.png
+c0000000012A4AE40000000000000043C
+t312782400
+s1084
+
+N/Users/Ari/dev/iLiveView/jerry_music_play_icn.png
+c0000000012A4AE4000000000000003F8
+t312782400
+s1016
+
+N/Users/Ari/dev/iLiveView/libBTstack.dylib
+c000000004D8A6F9D000000000000AA50
+t1300918173
+s43600
+
+N/Users/Ari/dev/iLiveView/logprevu.png
+c000000004D8EAAF70000000000000375
+t1301195511
+s885
+
+N/Users/Ari/dev/iLiveView/main.m
+c000000004D908E520000000000000160
+t1301319250
+s352
+i<UIKit/UIKit.h>
+
+N/Users/Ari/dev/iLiveView/music.png
+c000000004D96922100000000000026F0
+t1301713441
+s9968
+
+N/Users/Ari/dev/iLiveView/success.png
+c000000004D7FF49E0000000000000623
+t1300231326
+s1571
+
+N/var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-akzbdgfcnsifkebdzyjpbogrdzfl/iLiveView_Prefix.pch.gch
+t1301412586
+s10446552
+
+N/var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-dnjuvgapwrwczebkahozzawpovzo/iLiveView_Prefix.pch.gch
+t1301412586
+s9983704
+
+NiLiveView-Info.plist
+c000000004D908E52000000000000038D
+t1301319250
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies323202326#323202326#0(0"0(0#1#0"8773717248#0"0#
+
+CCodeSign /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app
+s323202327.007608
+e323202327.229818
+r1
+xCodeSign
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app
+lSLF07#2@43"CodeSign build/Debug-iphoneos/iLiveView.app323202327#323202327#0(0"0(0#0#59"/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app8773720000#603"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Ari Weinstein (8RLNFPYUNZ)" --resource-rules=/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/ResourceRules.plist --entitlements /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView.xcent /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app0#
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/LiveView.o /Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LiveView.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/LiveViewRFCOMM.o /Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LiveViewRFCOMM.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/NSMutableData+endian.o /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s323105386.212331
+e323105386.323089
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/NSMutableData+endian.o
+x/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m323105386#323105386#0(0"0(0#0#55"/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m8643459040#1650"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv6 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-dnjuvgapwrwczebkahozzawpovzo/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/NSMutableData+endian.o0#
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewAppDelegate.o /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s323199203.635098
+e323199203.936402
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewAppDelegate.o
+x/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m323199203#323199203#0(0"0(0#0#55"/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m8750221760#1650"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv6 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-dnjuvgapwrwczebkahozzawpovzo/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewAppDelegate.o0#
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewViewController.o /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s323202326.425998
+e323202326.953923
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewViewController.o
+x/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController handleLiveViewMessage:withData:]':
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:25: warning: unused variable 'c'
+lSLF07#2@66"Compile /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323202326#323202326#0(226"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController handleLiveViewMessage:withData:]':/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:25: warning: unused variable 'c'1(22@19"Unused variable 'c'323202326#134#92#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323202326#25#0#25#0#19"unused variable '*'0(0#0#58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m8767613248#1656"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv6 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-dnjuvgapwrwczebkahozzawpovzo/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveViewViewController.o0#
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/main.o /Users/Ari/dev/iLiveView/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+s323105386.209570
+e323105386.272207
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/main.o
+x/Users/Ari/dev/iLiveView/main.m
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@39"Compile /Users/Ari/dev/iLiveView/main.m323105386#323105386#0(0"0(0#0#31"/Users/Ari/dev/iLiveView/main.m8645570880#1610"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv6 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-dnjuvgapwrwczebkahozzawpovzo/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/main.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/main.o0#
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/LiveView.o /Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LiveView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/LiveViewRFCOMM.o /Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LiveViewRFCOMM.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/NSMutableData+endian.o /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s323105386.341804
+e323105386.474891
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/NSMutableData+endian.o
+x/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m323105386#323105386#0(0"0(0#0#55"/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m8641929216#1650"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv7 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-akzbdgfcnsifkebdzyjpbogrdzfl/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/NSMutableData+endian.o0#
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewAppDelegate.o /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s323199203.899830
+e323199204.073290
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewAppDelegate.o
+x/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m323199203#323199204#0(0"0(0#0#55"/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m8758198144#1650"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv7 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-akzbdgfcnsifkebdzyjpbogrdzfl/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewAppDelegate.o0#
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewViewController.o /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s323202326.695766
+e323202326.928866
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewViewController.o
+x/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController handleLiveViewMessage:withData:]':
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:25: warning: unused variable 'c'
+lSLF07#2@66"Compile /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323202326#323202326#0(226"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController handleLiveViewMessage:withData:]':/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:25: warning: unused variable 'c'1(22@19"Unused variable 'c'323202326#134#92#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323202326#25#0#25#0#19"unused variable '*'0(0#0#58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m8779809120#1656"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv7 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-akzbdgfcnsifkebdzyjpbogrdzfl/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveViewViewController.o0#
+
+CCompileC build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/main.o /Users/Ari/dev/iLiveView/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s323105386.272368
+e323105386.341671
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/main.o
+x/Users/Ari/dev/iLiveView/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@39"Compile /Users/Ari/dev/iLiveView/main.m323105386#323105386#0(0"0(0#0#31"/Users/Ari/dev/iLiveView/main.m8643052928#1610"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv7 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-akzbdgfcnsifkebdzyjpbogrdzfl/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/main.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/main.o0#
+
+CCompileXIB /Users/Ari/dev/iLiveView/MainWindow.xib
+s323105384.364370
+e323105384.989870
+r1
+xCompileXIB
+x/Users/Ari/dev/iLiveView/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib323105384#323105384#0(0"0(0#0#39"/Users/Ari/dev/iLiveView/MainWindow.xib8645932736#502"    cd /Users/Ari/dev/iLiveView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MainWindow.nib /Users/Ari/dev/iLiveView/MainWindow.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCompileXIB /Users/Ari/dev/iLiveView/iLiveViewViewController.xib
+s323149913.392917
+e323149913.980607
+r1
+xCompileXIB
+x/Users/Ari/dev/iLiveView/iLiveViewViewController.xib
+lSLF07#2@38"CompileXIB iLiveViewViewController.xib323149913#323149913#0(0"0(0#0#52"/Users/Ari/dev/iLiveView/iLiveViewViewController.xib8738788512#528"    cd /Users/Ari/dev/iLiveView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveViewViewController.nib /Users/Ari/dev/iLiveView/iLiveViewViewController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
+
+CCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPause.png MusicPause.png
+s323144517.109717
+e323144517.308199
+r1
+xCopyPNGFile
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPause.png
+xMusicPause.png
+lSLF07#2@76"CopyPNGFile build/Debug-iphoneos/iLiveView.app/MusicPause.png MusicPause.png323144517#323144517#0(0"0(0#0#39"/Users/Ari/dev/iLiveView/MusicPause.png8641913568#518"    cd /Users/Ari/dev/iLiveView    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" "" /Users/Ari/dev/iLiveView/MusicPause.png /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPause.png0#
+
+CCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPlay.png MusicPlay.png
+s323144517.110665
+e323144517.308463
+r1
+xCopyPNGFile
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPlay.png
+xMusicPlay.png
+lSLF07#2@74"CopyPNGFile build/Debug-iphoneos/iLiveView.app/MusicPlay.png MusicPlay.png323144517#323144517#0(0"0(0#0#38"/Users/Ari/dev/iLiveView/MusicPlay.png8641651136#516"    cd /Users/Ari/dev/iLiveView    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" "" /Users/Ari/dev/iLiveView/MusicPlay.png /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/MusicPlay.png0#
+
+CCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/Plus.png Plus.png
+s323106340.650187
+e323106340.870906
+r1
+xCopyPNGFile
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/Plus.png
+xPlus.png
+lSLF07#2@64"CopyPNGFile build/Debug-iphoneos/iLiveView.app/Plus.png Plus.png323106340#323106340#0(0"0(0#0#33"/Users/Ari/dev/iLiveView/Plus.png8640893248#506"    cd /Users/Ari/dev/iLiveView    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" "" /Users/Ari/dev/iLiveView/Plus.png /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/Plus.png0#
+
+CCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/fail.png fail.png
+s323147330.846016
+e323147331.409977
+r1
+xCopyPNGFile
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/fail.png
+xfail.png
+lSLF07#2@64"CopyPNGFile build/Debug-iphoneos/iLiveView.app/fail.png fail.png323147330#323147331#0(0"0(0#0#33"/Users/Ari/dev/iLiveView/fail.png8614560128#506"    cd /Users/Ari/dev/iLiveView    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" "" /Users/Ari/dev/iLiveView/fail.png /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/fail.png0#
+
+CCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/jerry_music_pause_icn.png jerry_music_pause_icn.png
+r0
+
+CCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/jerry_music_play_icn.png jerry_music_play_icn.png
+r0
+
+CCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/logprevu.png logprevu.png
+s323105384.365903
+e323105384.388410
+r1
+xCopyPNGFile
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/logprevu.png
+xlogprevu.png
+lSLF07#2@72"CopyPNGFile build/Debug-iphoneos/iLiveView.app/logprevu.png logprevu.png323105384#323105384#0(0"0(0#0#37"/Users/Ari/dev/iLiveView/logprevu.png8645658272#514"    cd /Users/Ari/dev/iLiveView    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" "" /Users/Ari/dev/iLiveView/logprevu.png /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/logprevu.png0#
+
+CCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/music.png music.png
+r0
+
+CCopyPNGFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/success.png success.png
+s323147330.847083
+e323147331.410249
+r1
+xCopyPNGFile
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/success.png
+xsuccess.png
+lSLF07#2@70"CopyPNGFile build/Debug-iphoneos/iLiveView.app/success.png success.png323147330#323147331#0(0"0(0#0#36"/Users/Ari/dev/iLiveView/success.png8703073440#512"    cd /Users/Ari/dev/iLiveView    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" "" /Users/Ari/dev/iLiveView/success.png /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/success.png0#
+
+CCpResource build/Debug-iphoneos/iLiveView.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+s323105384.328027
+e323105384.363879
+r1
+xCpResource
+xbuild/Debug-iphoneos/iLiveView.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist323105384#323105384#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist8645116000#468"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app0#
+
+CCreateUniversalBinary /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView normal "armv6 armv7"
+s323202326.983312
+e323202326.986269
+r1
+xCreateUniversalBinary
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView
+xnormal
+xarmv6 armv7
+lSLF07#2@87"CreateUniversalBinary build/Debug-iphoneos/iLiveView.app/iLiveView normal "armv6 armv7"323202326#323202326#0(0"0(0#0#36"/Users/Ari/dev/iLiveView/armv6 armv78779959488#478"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveView /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveView -output /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView0#
+
+CGenerateDSYMFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app.dSYM /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView
+s323202326.986340
+e323202327.005102
+r1
+xGenerateDSYMFile
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app.dSYM
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView
+lSLF07#2@101"GenerateDSYMFile build/Debug-iphoneos/iLiveView.app.dSYM build/Debug-iphoneos/iLiveView.app/iLiveView323202326#323202327#0(0"0(0#0#69"/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView8779137664#326"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/iLiveView -o /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app.dSYM0#
+
+CLd /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveView normal armv6
+s323202326.954032
+e323202326.983199
+r1
+xLd
+x/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveView
+xnormal
+xarmv6
+lSLF07#2@113"Link /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveView323202326#323202326#0(0"0(0#0#0"8780234752#861"    cd /Users/Ari/dev/iLiveView    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/Ari/dev/iLiveView/build/Debug-iphoneos -L/Users/Ari/dev/iLiveView -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -filelist /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveView.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -lBTstack -framework MediaPlayer -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv6/iLiveView0#
+
+CLd /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveView normal armv7
+s323202326.928981
+e323202326.968126
+r1
+xLd
+x/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveView
+xnormal
+xarmv7
+lSLF07#2@113"Link /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveView323202326#323202326#0(0"0(0#0#0"8782046976#861"    cd /Users/Ari/dev/iLiveView    setenv IPHONEOS_DEPLOYMENT_TARGET 4.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/Ari/dev/iLiveView/build/Debug-iphoneos -L/Users/Ari/dev/iLiveView -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -filelist /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveView.LinkFileList -dead_strip -miphoneos-version-min=4.2 -framework Foundation -framework UIKit -framework CoreGraphics -lBTstack -framework MediaPlayer -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/Objects-normal/armv7/iLiveView0#
+
+CProcessInfoPlistFile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/Info.plist iLiveView-Info.plist
+s323105384.329167
+e323105384.364139
+r1
+xProcessInfoPlistFile
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/Info.plist
+xiLiveView-Info.plist
+lSLF07#2@28"Process iLiveView-Info.plist323105384#323105384#0(0"0(0#0#45"/Users/Ari/dev/iLiveView/iLiveView-Info.plist8645082176#514"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility iLiveView-Info.plist -genpkginfo /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/ResourceRules.plist -o /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/Info.plist0#
+
+CProcessPCH /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-akzbdgfcnsifkebdzyjpbogrdzfl/iLiveView_Prefix.pch.gch iLiveView_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s323105385.099604
+e323105386.136751
+r1
+xProcessPCH
+x/var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-akzbdgfcnsifkebdzyjpbogrdzfl/iLiveView_Prefix.pch.gch
+xiLiveView_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile iLiveView_Prefix.pch323105385#323105386#0(0"0(0#0#45"/Users/Ari/dev/iLiveView/iLiveView_Prefix.pch8645814208#1520"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv7 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -c /Users/Ari/dev/iLiveView/iLiveView_Prefix.pch -o /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-akzbdgfcnsifkebdzyjpbogrdzfl/iLiveView_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-dnjuvgapwrwczebkahozzawpovzo/iLiveView_Prefix.pch.gch iLiveView_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+s323105385.098722
+e323105386.209383
+r1
+xProcessPCH
+x/var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-dnjuvgapwrwczebkahozzawpovzo/iLiveView_Prefix.pch.gch
+xiLiveView_Prefix.pch
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile iLiveView_Prefix.pch323105385#323105386#0(0"0(0#0#45"/Users/Ari/dev/iLiveView/iLiveView_Prefix.pch8643037472#1520"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphoneos -I/Users/Ari/dev/iLiveView/build/Debug-iphoneos/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources/armv6 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/DerivedSources -c /Users/Ari/dev/iLiveView/iLiveView_Prefix.pch -o /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-dnjuvgapwrwczebkahozzawpovzo/iLiveView_Prefix.pch.gch0#
+
+CProcessProductPackaging "/Users/Ari/Library/MobileDevice/Provisioning Profiles/43CBFDEC-53BB-4213-825A-42E6BD979D3B.mobileprovision" /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/embedded.mobileprovision
+s323105386.565861
+e323105386.574899
+r1
+xProcessProductPackaging
+x/Users/Ari/Library/MobileDevice/Provisioning Profiles/43CBFDEC-53BB-4213-825A-42E6BD979D3B.mobileprovision
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/embedded.mobileprovision
+lSLF07#2@192"ProcessProductPackaging "/Users/Ari/Library/MobileDevice/Provisioning Profiles/43CBFDEC-53BB-4213-825A-42E6BD979D3B.mobileprovision" build/Debug-iphoneos/iLiveView.app/embedded.mobileprovision323105386#323105386#0(0"0(0#0#84"/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/embedded.mobileprovision8643456832#395"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/Ari/Library/MobileDevice/Provisioning Profiles/43CBFDEC-53BB-4213-825A-42E6BD979D3B.mobileprovision" -o /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/embedded.mobileprovision0#
+
+CProcessProductPackaging "/Users/Ari/Library/MobileDevice/Provisioning Profiles/BB11F5FE-90C6-4519-B254-7052FE96B754.mobileprovision" /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app/embedded.mobileprovision
+r0
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView.xcent
+s323105386.579410
+e323105386.597981
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
+x/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView.xcent
+lSLF07#2@181"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView.xcent323105386#323105386#0(0"0(0#0#93"/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView.xcent8625062144#410"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphoneos/iLiveView.build/iLiveView.xcent0#
+
+CTouch /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app
+s323202327.005282
+e323202327.007486
+r1
+xTouch
+x/Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app
+lSLF07#2@65"Touch /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app323202327#323202327#0(0"0(0#0#0"8761196416#238"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Ari/dev/iLiveView/build/Debug-iphoneos/iLiveView.app0#
+

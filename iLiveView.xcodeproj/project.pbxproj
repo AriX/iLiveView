@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0220E05C13424643007D3830 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0220E05B13424643007D3830 /* MediaPlayer.framework */; };
+		0240D5D015EC186100B4B586 /* NSMutableData+endian.m in Sources */ = {isa = PBXBuildFile; fileRef = 0240D5CF15EC186100B4B586 /* NSMutableData+endian.m */; };
+		0240D5DE15EC187000B4B586 /* LiveViewRFCOMM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0240D5D215EC187000B4B586 /* LiveViewRFCOMM.m */; };
+		0240D5DF15EC187000B4B586 /* LVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0240D5D415EC187000B4B586 /* LVController.m */; };
+		0240D5E015EC187000B4B586 /* LVMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0240D5D715EC187000B4B586 /* LVMenuItem.m */; };
+		0240D5E115EC187000B4B586 /* LVMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0240D5D915EC187000B4B586 /* LVMessageItem.m */; };
+		0240D5E215EC187000B4B586 /* LVPreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0240D5DB15EC187000B4B586 /* LVPreferenceManager.m */; };
+		0240D5E315EC187000B4B586 /* LVSimpleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0240D5DD15EC187000B4B586 /* LVSimpleItem.m */; };
+		0240D5E615EC18F500B4B586 /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5E415EC18F500B4B586 /* fail.png */; };
+		0240D5E715EC18F500B4B586 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5E515EC18F500B4B586 /* success.png */; };
+		0240D5F115EC18FB00B4B586 /* logprevu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5E815EC18FB00B4B586 /* logprevu.png */; };
+		0240D5F215EC18FB00B4B586 /* Messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5E915EC18FB00B4B586 /* Messages.png */; };
+		0240D5F315EC18FB00B4B586 /* MessagesSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5EA15EC18FB00B4B586 /* MessagesSmall.png */; };
+		0240D5F415EC18FB00B4B586 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5EB15EC18FB00B4B586 /* music.png */; };
+		0240D5F515EC18FB00B4B586 /* MusicPause.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5EC15EC18FB00B4B586 /* MusicPause.png */; };
+		0240D5F615EC18FB00B4B586 /* MusicPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5ED15EC18FB00B4B586 /* MusicPlay.png */; };
+		0240D5F715EC18FB00B4B586 /* prevue_sw.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5EE15EC18FB00B4B586 /* prevue_sw.png */; };
+		0240D5F815EC18FB00B4B586 /* vue_sw.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5EF15EC18FB00B4B586 /* vue_sw.png */; };
+		0240D5F915EC18FB00B4B586 /* vue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5F015EC18FB00B4B586 /* vue.png */; };
+		02A3F27215A3A07B0091AECF /* iLiveViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A3F26815A3A07B0091AECF /* iLiveViewAppDelegate.m */; };
+		02A3F27315A3A07B0091AECF /* iLiveViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A3F26A15A3A07B0091AECF /* iLiveViewViewController.m */; };
+		02F4D15415A3AD030018B8A8 /* BTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4D14E15A3AD030018B8A8 /* BTDevice.m */; };
+		02F4D15515A3AD030018B8A8 /* BTDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4D14F15A3AD030018B8A8 /* BTDiscoveryViewController.m */; };
+		02F4D15615A3AD030018B8A8 /* BTInquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4D15015A3AD030018B8A8 /* BTInquiryViewController.m */; };
+		02F4D15815A3AD030018B8A8 /* BTstackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4D15315A3AD030018B8A8 /* BTstackManager.m */; };
+		02F4D15A15A3E1610018B8A8 /* libBTstacknews.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F4D15915A3E1610018B8A8 /* libBTstacknews.dylib */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* iLiveViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* iLiveViewViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0220E05B13424643007D3830 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0240D5CE15EC186100B4B586 /* NSMutableData+endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableData+endian.h"; path = "liveview/NSMutableData+endian.h"; sourceTree = "<group>"; };
+		0240D5CF15EC186100B4B586 /* NSMutableData+endian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableData+endian.m"; path = "liveview/NSMutableData+endian.m"; sourceTree = "<group>"; };
+		0240D5D115EC187000B4B586 /* LiveViewConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveViewConstants.h; path = liveview/LiveViewConstants.h; sourceTree = SOURCE_ROOT; };
+		0240D5D215EC187000B4B586 /* LiveViewRFCOMM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveViewRFCOMM.m; path = liveview/LiveViewRFCOMM.m; sourceTree = SOURCE_ROOT; };
+		0240D5D315EC187000B4B586 /* LVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LVController.h; path = liveview/LVController.h; sourceTree = SOURCE_ROOT; };
+		0240D5D415EC187000B4B586 /* LVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LVController.m; path = liveview/LVController.m; sourceTree = SOURCE_ROOT; };
+		0240D5D515EC187000B4B586 /* LVItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LVItemProtocol.h; path = liveview/LVItemProtocol.h; sourceTree = SOURCE_ROOT; };
+		0240D5D615EC187000B4B586 /* LVMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LVMenuItem.h; path = liveview/LVMenuItem.h; sourceTree = SOURCE_ROOT; };
+		0240D5D715EC187000B4B586 /* LVMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LVMenuItem.m; path = liveview/LVMenuItem.m; sourceTree = SOURCE_ROOT; };
+		0240D5D815EC187000B4B586 /* LVMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LVMessageItem.h; path = liveview/LVMessageItem.h; sourceTree = SOURCE_ROOT; };
+		0240D5D915EC187000B4B586 /* LVMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LVMessageItem.m; path = liveview/LVMessageItem.m; sourceTree = SOURCE_ROOT; };
+		0240D5DA15EC187000B4B586 /* LVPreferenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LVPreferenceManager.h; path = liveview/LVPreferenceManager.h; sourceTree = SOURCE_ROOT; };
+		0240D5DB15EC187000B4B586 /* LVPreferenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LVPreferenceManager.m; path = liveview/LVPreferenceManager.m; sourceTree = SOURCE_ROOT; };
+		0240D5DC15EC187000B4B586 /* LVSimpleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LVSimpleItem.h; path = liveview/LVSimpleItem.h; sourceTree = SOURCE_ROOT; };
+		0240D5DD15EC187000B4B586 /* LVSimpleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LVSimpleItem.m; path = liveview/LVSimpleItem.m; sourceTree = SOURCE_ROOT; };
+		0240D5E415EC18F500B4B586 /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fail.png; path = "liveview/layout/Library/Application Support/LiveView/fail.png"; sourceTree = "<group>"; };
+		0240D5E515EC18F500B4B586 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = success.png; path = "liveview/layout/Library/Application Support/LiveView/success.png"; sourceTree = "<group>"; };
+		0240D5E815EC18FB00B4B586 /* logprevu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logprevu.png; path = "liveview/layout/Library/Application Support/LiveView/logprevu.png"; sourceTree = "<group>"; };
+		0240D5E915EC18FB00B4B586 /* Messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Messages.png; path = "liveview/layout/Library/Application Support/LiveView/Messages.png"; sourceTree = "<group>"; };
+		0240D5EA15EC18FB00B4B586 /* MessagesSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MessagesSmall.png; path = "liveview/layout/Library/Application Support/LiveView/MessagesSmall.png"; sourceTree = "<group>"; };
+		0240D5EB15EC18FB00B4B586 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = music.png; path = "liveview/layout/Library/Application Support/LiveView/music.png"; sourceTree = "<group>"; };
+		0240D5EC15EC18FB00B4B586 /* MusicPause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicPause.png; path = "liveview/layout/Library/Application Support/LiveView/MusicPause.png"; sourceTree = "<group>"; };
+		0240D5ED15EC18FB00B4B586 /* MusicPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MusicPlay.png; path = "liveview/layout/Library/Application Support/LiveView/MusicPlay.png"; sourceTree = "<group>"; };
+		0240D5EE15EC18FB00B4B586 /* prevue_sw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prevue_sw.png; path = "liveview/layout/Library/Application Support/LiveView/prevue_sw.png"; sourceTree = "<group>"; };
+		0240D5EF15EC18FB00B4B586 /* vue_sw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vue_sw.png; path = "liveview/layout/Library/Application Support/LiveView/vue_sw.png"; sourceTree = "<group>"; };
+		0240D5F015EC18FB00B4B586 /* vue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vue.png; path = "liveview/layout/Library/Application Support/LiveView/vue.png"; sourceTree = "<group>"; };
+		02A3F26715A3A07B0091AECF /* iLiveViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveViewAppDelegate.h; sourceTree = "<group>"; };
+		02A3F26815A3A07B0091AECF /* iLiveViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveViewAppDelegate.m; sourceTree = "<group>"; };
+		02A3F26915A3A07B0091AECF /* iLiveViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveViewViewController.h; sourceTree = "<group>"; };
+		02A3F26A15A3A07B0091AECF /* iLiveViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveViewViewController.m; sourceTree = "<group>"; };
+		02F4D14E15A3AD030018B8A8 /* BTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDevice.m; sourceTree = "<group>"; };
+		02F4D14F15A3AD030018B8A8 /* BTDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDiscoveryViewController.m; sourceTree = "<group>"; };
+		02F4D15015A3AD030018B8A8 /* BTInquiryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTInquiryViewController.m; sourceTree = "<group>"; };
+		02F4D15315A3AD030018B8A8 /* BTstackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTstackManager.m; sourceTree = "<group>"; };
+		02F4D15915A3E1610018B8A8 /* libBTstacknews.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libBTstacknews.dylib; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* iLiveView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLiveView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* iLiveViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iLiveViewViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iLiveView_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveView_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* iLiveView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iLiveView-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				0220E05C13424643007D3830 /* MediaPlayer.framework in Frameworks */,
+				02F4D15A15A3E1610018B8A8 /* libBTstacknews.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0240D5CC15EC17B200B4B586 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				0240D5E815EC18FB00B4B586 /* logprevu.png */,
+				0240D5E915EC18FB00B4B586 /* Messages.png */,
+				0240D5EA15EC18FB00B4B586 /* MessagesSmall.png */,
+				0240D5EB15EC18FB00B4B586 /* music.png */,
+				0240D5EC15EC18FB00B4B586 /* MusicPause.png */,
+				0240D5ED15EC18FB00B4B586 /* MusicPlay.png */,
+				0240D5EE15EC18FB00B4B586 /* prevue_sw.png */,
+				0240D5EF15EC18FB00B4B586 /* vue_sw.png */,
+				0240D5F015EC18FB00B4B586 /* vue.png */,
+			);
+			name = Device;
+			sourceTree = "<group>";
+		};
+		0240D5CD15EC17D500B4B586 /* Test Console */ = {
+			isa = PBXGroup;
+			children = (
+				0240D5E415EC18F500B4B586 /* fail.png */,
+				0240D5E515EC18F500B4B586 /* success.png */,
+				2899E5210DE3E06400AC0155 /* iLiveViewViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+			);
+			name = "Test Console";
+			sourceTree = "<group>";
+		};
+		02F4D14D15A3ACF30018B8A8 /* BTStack */ = {
+			isa = PBXGroup;
+			children = (
+				02F4D14E15A3AD030018B8A8 /* BTDevice.m */,
+				02F4D14F15A3AD030018B8A8 /* BTDiscoveryViewController.m */,
+				02F4D15015A3AD030018B8A8 /* BTInquiryViewController.m */,
+				02F4D15315A3AD030018B8A8 /* BTstackManager.m */,
+			);
+			name = BTStack;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				02A3F26715A3A07B0091AECF /* iLiveViewAppDelegate.h */,
+				02A3F26815A3A07B0091AECF /* iLiveViewAppDelegate.m */,
+				02A3F26915A3A07B0091AECF /* iLiveViewViewController.h */,
+				02A3F26A15A3A07B0091AECF /* iLiveViewViewController.m */,
+				0240D5D115EC187000B4B586 /* LiveViewConstants.h */,
+				0240D5D215EC187000B4B586 /* LiveViewRFCOMM.m */,
+				0240D5D315EC187000B4B586 /* LVController.h */,
+				0240D5D415EC187000B4B586 /* LVController.m */,
+				0240D5D515EC187000B4B586 /* LVItemProtocol.h */,
+				0240D5D615EC187000B4B586 /* LVMenuItem.h */,
+				0240D5D715EC187000B4B586 /* LVMenuItem.m */,
+				0240D5D815EC187000B4B586 /* LVMessageItem.h */,
+				0240D5D915EC187000B4B586 /* LVMessageItem.m */,
+				0240D5DA15EC187000B4B586 /* LVPreferenceManager.h */,
+				0240D5DB15EC187000B4B586 /* LVPreferenceManager.m */,
+				0240D5DC15EC187000B4B586 /* LVSimpleItem.h */,
+				0240D5DD15EC187000B4B586 /* LVSimpleItem.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iLiveView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				02F4D14D15A3ACF30018B8A8 /* BTStack */,
+				0240D5CE15EC186100B4B586 /* NSMutableData+endian.h */,
+				0240D5CF15EC186100B4B586 /* NSMutableData+endian.m */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				32CA4F630368D1EE00C91783 /* iLiveView_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0240D5CD15EC17D500B4B586 /* Test Console */,
+				0240D5CC15EC17B200B4B586 /* Device */,
+				8D1107310486CEB800E47090 /* iLiveView-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02F4D15915A3E1610018B8A8 /* libBTstacknews.dylib */,
+				0220E05B13424643007D3830 /* MediaPlayer.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iLiveView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iLiveView" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iLiveView;
+			productName = iLiveView;
+			productReference = 1D6058910D05DD3D006BFB54 /* iLiveView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iLiveView" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iLiveView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* iLiveViewViewController.xib in Resources */,
+				0240D5E615EC18F500B4B586 /* fail.png in Resources */,
+				0240D5E715EC18F500B4B586 /* success.png in Resources */,
+				0240D5F115EC18FB00B4B586 /* logprevu.png in Resources */,
+				0240D5F215EC18FB00B4B586 /* Messages.png in Resources */,
+				0240D5F315EC18FB00B4B586 /* MessagesSmall.png in Resources */,
+				0240D5F415EC18FB00B4B586 /* music.png in Resources */,
+				0240D5F515EC18FB00B4B586 /* MusicPause.png in Resources */,
+				0240D5F615EC18FB00B4B586 /* MusicPlay.png in Resources */,
+				0240D5F715EC18FB00B4B586 /* prevue_sw.png in Resources */,
+				0240D5F815EC18FB00B4B586 /* vue_sw.png in Resources */,
+				0240D5F915EC18FB00B4B586 /* vue.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				02A3F27215A3A07B0091AECF /* iLiveViewAppDelegate.m in Sources */,
+				02A3F27315A3A07B0091AECF /* iLiveViewViewController.m in Sources */,
+				02F4D15415A3AD030018B8A8 /* BTDevice.m in Sources */,
+				02F4D15515A3AD030018B8A8 /* BTDiscoveryViewController.m in Sources */,
+				02F4D15615A3AD030018B8A8 /* BTInquiryViewController.m in Sources */,
+				02F4D15815A3AD030018B8A8 /* BTstackManager.m in Sources */,
+				0240D5D015EC186100B4B586 /* NSMutableData+endian.m in Sources */,
+				0240D5DE15EC187000B4B586 /* LiveViewRFCOMM.m in Sources */,
+				0240D5DF15EC187000B4B586 /* LVController.m in Sources */,
+				0240D5E015EC187000B4B586 /* LVMenuItem.m in Sources */,
+				0240D5E115EC187000B4B586 /* LVMessageItem.m in Sources */,
+				0240D5E215EC187000B4B586 /* LVPreferenceManager.m in Sources */,
+				0240D5E315EC187000B4B586 /* LVSimpleItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iLiveView_Prefix.pch;
+				HEADER_SEARCH_PATHS = "/Users/Ari/dev/iLiveView/**";
+				INFOPLIST_FILE = "iLiveView-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = iLiveView;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iLiveView_Prefix.pch;
+				HEADER_SEARCH_PATHS = "/Users/Ari/dev/iLiveView/**";
+				INFOPLIST_FILE = "iLiveView-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = iLiveView;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iLiveView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iLiveView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

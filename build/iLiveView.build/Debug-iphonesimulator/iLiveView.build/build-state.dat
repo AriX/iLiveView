@@ -1,0 +1,720 @@
+TiLiveView
+v7
+r0
+t323104492.470526
+cCheck dependencies
+cProcessInfoPlistFile /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/Info.plist iLiveView-Info.plist
+cCompileXIB /Users/Ari/dev/iLiveView/MainWindow.xib
+cCompileXIB /Users/Ari/dev/iLiveView/iLiveViewViewController.xib
+cCpResource build/Debug-iphonesimulator/iLiveView.app/logprevu.png logprevu.png
+cProcessPCH /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-fqzlarryydbiylgqhozjarzzbfia/iLiveView_Prefix.pch.gch iLiveView_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/main.o /Users/Ari/dev/iLiveView/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewAppDelegate.o /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewViewController.o /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/NSMutableData+endian.o /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk
+c000000004CF011680000000000000110
+t1290801512
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004C5A4DB60000000000295900
+t1280986550
+s2709760
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004C5A4DB0000000000029D580
+t1280986544
+s2741632
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C5A4DA10000000000001466
+t1280986529
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.h
+c000000004C68B9E40000000000000268
+t1281931748
+s616
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/MediaPlayer.framework/MediaPlayer
+c000000004C68BA00000000000015B0F0
+t1281931776
+s1421552
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C6241ED00000000000009CD
+t1281507821
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C6242840000000001E228C0
+t1281507972
+s31598784
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/errno.h
+c000000004C57909100000000000003EB
+t1280807057
+s1003
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/fcntl.h
+c000000004C57909100000000000003EA
+t1280807057
+s1002
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/stdio.h
+c000000004C57909200000000000040AC
+t1280807058
+s16556
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/stdlib.h
+c000000004C5790920000000000002DF5
+t1280807058
+s11765
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/string.h
+c000000004C5790920000000000001731
+t1280807058
+s5937
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/strings.h
+c000000004C5790910000000000000DA4
+t1280807057
+s3492
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/sys/stat.h
+c000000004C5798EC0000000000004A1D
+t1280809196
+s18973
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/sys/types.h
+c000000004C5798ED0000000000002905
+t1280809197
+s10501
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/usr/include/unistd.h
+c000000004C579092000000000000563E
+t1280807058
+s22078
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/errno.h
+c000000004CB3E48600000000000003EB
+t1286857862
+s1003
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/fcntl.h
+c000000004CB3E48600000000000003EA
+t1286857862
+s1002
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/stdio.h
+c000000004CB3E48600000000000040AC
+t1286857862
+s16556
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/stdlib.h
+c000000004CB3E4860000000000002DF5
+t1286857862
+s11765
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/string.h
+c000000004CB3E4860000000000001731
+t1286857862
+s5937
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/strings.h
+c000000004CB3E4860000000000000DA4
+t1286857862
+s3492
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/sys/stat.h
+c000000004CBFACAC0000000000004A1D
+t1287629996
+s18973
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/sys/types.h
+c000000004CBFACAC0000000000002905
+t1287629996
+s10501
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/unistd.h
+c000000004CB3E486000000000000563E
+t1286857862
+s22078
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/LVController.h
+c000000004DF6CDBC00000000000009B9
+t1308020156
+s2489
+i<unistd.h>
+i<stdio.h>
+i<stdlib.h>
+i<strings.h>
+i<errno.h>
+i<string.h>
+i<fcntl.h>
+i<sys/types.h>
+i<sys/stat.h>
+i<btstack/btstack.h>
+i<MediaPlayer/MediaPlayer.h>
+i"NSMutableData+endian.h"
+i"LiveViewConstants.h"
+i"LVMenuItem.h"
+i"LVSimpleItem.h"
+i"LVMessageItem.h"
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/LVItemProtocol.h
+c000000004DF67D400000000000000157
+t1307999552
+s343
+i<Foundation/Foundation.h>
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/LVMenuItem.h
+c000000004DF67FB200000000000002C1
+t1308000178
+s705
+i<Foundation/Foundation.h>
+i"LVItemProtocol.h"
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/LVMessageItem.h
+c000000004DF6CB200000000000000240
+t1308019488
+s576
+i<Foundation/Foundation.h>
+i"LVItemProtocol.h"
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/LVSimpleItem.h
+c000000004DF67DA50000000000000245
+t1307999653
+s581
+i<Foundation/Foundation.h>
+i"LVItemProtocol.h"
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/LiveViewConstants.h
+c000000004D9669520000000000000E25
+t1301702994
+s3621
+i<UIKit/UIKit.h>
+
+N/Users/Ari/Downloads/peterhajas-MobileNotifier-062a303/NSMutableData+endian.h
+c000000004D939657000000000000028D
+t1301517911
+s653
+i<Foundation/Foundation.h>
+
+N/Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LVController.h
+c000000004DF6CDBC00000000000009B9
+t1308020156
+s2489
+i<unistd.h>
+i<stdio.h>
+i<stdlib.h>
+i<strings.h>
+i<errno.h>
+i<string.h>
+i<fcntl.h>
+i<sys/types.h>
+i<sys/stat.h>
+i<btstack/btstack.h>
+i<MediaPlayer/MediaPlayer.h>
+i"NSMutableData+endian.h"
+i"LiveViewConstants.h"
+i"LVMenuItem.h"
+i"LVSimpleItem.h"
+i"LVMessageItem.h"
+
+N/Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LVController.m
+c000000004DF6CE83000000000000474B
+t1308020355
+s18251
+i"LVController.h"
+
+N/Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LVMenuItem.m
+c000000004DF67FAD00000000000003FE
+t1308000173
+s1022
+i"LVMenuItem.h"
+
+N/Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LVSimpleItem.m
+c000000004DF67D710000000000000248
+t1307999601
+s584
+i"LVSimpleItem.h"
+
+N/Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LiveViewRFCOMM.m
+c000000004DF666740000000000002BA0
+t1307993716
+s11168
+i"LVController.h"
+
+N/Users/Ari/dev/iLiveView/Classes/LiveViewCallback.h
+c000000004D90952C000000000000086E
+t1301321004
+s2158
+i<Foundation/Foundation.h>
+
+N/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.h
+c000000004D939657000000000000028D
+t1301517911
+s653
+i<Foundation/Foundation.h>
+
+N/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m
+c000000004D8FF82600000000000012E6
+t1301280806
+s4838
+i"NSMutableData+endian.h"
+
+N/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.h
+c000000004D908E5200000000000001E0
+t1301319250
+s480
+i<UIKit/UIKit.h>
+
+N/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m
+c000000004D920FDD0000000000000A93
+t1301417949
+s2707
+i"iLiveViewAppDelegate.h"
+i"iLiveViewViewController.h"
+
+N/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h
+c000000004DF668AB00000000000003DF
+t1307994283
+s991
+i"LVController.h"
+
+N/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m
+c000000004DF6A184000000000000104F
+t1308008836
+s4175
+i"iLiveViewViewController.h"
+
+N/Users/Ari/dev/iLiveView/MainWindow.xib
+c000000004D908E520000000000004E41
+t1301319250
+s20033
+
+N/Users/Ari/dev/iLiveView/MusicPause.png
+c0000000012A4AE40000000000000043C
+t312782400
+s1084
+
+N/Users/Ari/dev/iLiveView/MusicPlay.png
+c0000000012A4AE4000000000000003F8
+t312782400
+s1016
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app
+t1301411634
+s238
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app.dSYM
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/Info.plist
+t1301411633
+s599
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/MainWindow.nib
+t1301411634
+s1127
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/MusicPause.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/MusicPlay.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/PkgInfo
+t1301411633
+s8
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/fail.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/iLiveView
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/iLiveViewViewController.nib
+t1301411634
+s2056
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/logprevu.png
+t1301411633
+s885
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/music.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/prevue_sw.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/success.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/vue.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/vue_sw.png
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/LVController.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/LVMenuItem.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/LVSimpleItem.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/LiveViewRFCOMM.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/NSMutableData+endian.o
+t1301411635
+s22264
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveView.LinkFileList
+c000000004D91F73100000000000001F3
+t1301411633
+s499
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewAppDelegate.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewViewController.o
+t2
+s0
+
+N/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/main.o
+t1301411635
+s6276
+
+N/Users/Ari/dev/iLiveView/fail.png
+c000000004D7FF4A4000000000000061B
+t1300231332
+s1563
+
+N/Users/Ari/dev/iLiveView/iLiveViewViewController.xib
+c000000004D96791A000000000000CBCB
+t1301707034
+s52171
+
+N/Users/Ari/dev/iLiveView/iLiveView_Prefix.pch
+c000000004D908E5200000000000000BB
+t1301319250
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/Ari/dev/iLiveView/libBTstack.dylib
+c000000004D8A6F9D000000000000AA50
+t1300918173
+s43600
+
+N/Users/Ari/dev/iLiveView/logprevu.png
+c000000004D8EAAF70000000000000375
+t1301195511
+s885
+
+N/Users/Ari/dev/iLiveView/main.m
+c000000004D908E520000000000000160
+t1301319250
+s352
+i<UIKit/UIKit.h>
+
+N/Users/Ari/dev/iLiveView/music.png
+c000000004D96922100000000000026F0
+t1301713441
+s9968
+
+N/Users/Ari/dev/iLiveView/prevue_sw.png
+c000000004DF68A7700000000000006A7
+t1308002935
+s1703
+
+N/Users/Ari/dev/iLiveView/success.png
+c000000004D7FF49E0000000000000623
+t1300231326
+s1571
+
+N/Users/Ari/dev/iLiveView/vue.png
+c000000004DF68C4A00000000000006DC
+t1308003402
+s1756
+
+N/Users/Ari/dev/iLiveView/vue_sw.png
+c000000004DF68D5C000000000000063E
+t1308003676
+s1598
+
+N/var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-fqzlarryydbiylgqhozjarzzbfia/iLiveView_Prefix.pch.gch
+t1301411634
+s15453392
+
+N/var/folders/hR/hR9wtiNSEH4ru0LdNlEwBU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-gjzmypyrjlrbliaavxrjoowfvtfv/iLiveView_Prefix.pch.gch
+t2
+s0
+
+NiLiveView-Info.plist
+c000000004DF657EF00000000000003C4
+t1307989999
+s964
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies323104492#323104492#0(0"0(0#1#0"8616114560#0"0#
+
+CCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/LVController.o /Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LVController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/LVMenuItem.o /Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LVMenuItem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/LVSimpleItem.o /Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LVSimpleItem.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/LiveViewRFCOMM.o /Users/Ari/dev/iLiveView/Classes/../../../Downloads/peterhajas-MobileNotifier-062a303/LiveViewRFCOMM.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/NSMutableData+endian.o /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323104435.029541
+e323104435.199450
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/NSMutableData+endian.o
+x/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m323104435#323104435#0(0"0(0#0#55"/Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m8635725504#1840"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator -I/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources/i386 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-fqzlarryydbiylgqhozjarzzbfia/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/Classes/NSMutableData+endian.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/NSMutableData+endian.o0#
+
+CCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewAppDelegate.o /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323104492.238605
+e323104492.409486
+r0
+xCompileC
+xbuild/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewAppDelegate.o
+x/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m:10:
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h:18:29: error: btstack/btstack.h: No such file or directory
+lSLF07#2@63"Compile /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m323104492#323104492#0(200"In file included from /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m:10:/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h:18:29: error: btstack/btstack.h: No such file or directory1(4@44"Btstack/btstack.h: No such file or directory323104492#82#118#2(7@77"In file included from /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m323104492#18446744073709551615#0#0(6@55"/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m323013532#10#0#10#0#0"0(13@106"Btstack/btstack.h: No such file or directory in /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h323104492#18446744073709551615#0#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h323051059#18#0#18#0#0"0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h323051059#18#0#18#0#28"*: No such file or directory0(0#0#55"/Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m8630600768#1840"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator -I/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources/i386 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-fqzlarryydbiylgqhozjarzzbfia/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/Classes/iLiveViewAppDelegate.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewAppDelegate.o1#
+
+CCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewViewController.o /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323104492.239681
+e323104492.470205
+r0
+xCompileC
+xbuild/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewViewController.o
+x/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:9:
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h:18:29: error: btstack/btstack.h: No such file or directory
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'addr'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:45: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'con_handle'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController stop]':
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:62: warning: implicit declaration of function 'bt_close'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController runBluetooth]':
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: warning: implicit declaration of function 'sscan_bd_addr'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: error: 'addr' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: error: (Each undeclared identifier is reported only once
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: error: for each function it appears in.)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:74: warning: implicit declaration of function 'run_loop_init'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:74: error: 'RUN_LOOP_POSIX' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:75: warning: implicit declaration of function 'bt_open'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:81: warning: implicit declaration of function 'print_bd_addr'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:83: warning: implicit declaration of function 'bt_register_packet_handler'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:84: warning: implicit declaration of function 'bt_send_cmd'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:84: error: 'btstack_set_power_mode' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:84: error: 'HCI_POWER_ON' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:85: warning: implicit declaration of function 'run_loop_execute'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController handleLiveViewMessage:withData:]':
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:185: error: 'i' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:97: warning: unused variable 'sc'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:97: warning: unused variable 'sb'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:97: warning: unused variable 'sa'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:96: warning: unused variable 'menuId'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:95: warning: unused variable 'navigation'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:94: warning: unused variable 'c'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:93: warning: unused variable 'number'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function 'rfcomm_send_packet':
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:380: warning: implicit declaration of function 'crc8_calc'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:381: warning: implicit declaration of function 'bt_send_l2cap'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function 'packet_handler':
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:425: error: 'bd_addr_t' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:425: error: expected ';' before 'event_addr'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:435: error: 'L2CAP_DATA_PACKET' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:486: warning: implicit declaration of function 'hexdump'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:545: error: 'HCI_EVENT_PACKET' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:549: error: 'BTSTACK_EVENT_POWERON_FAILED' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:555: error: 'BTSTACK_EVENT_STATE' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:557: error: 'HCI_STATE_WORKING' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:558: error: 'hci_write_authentication_enable' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:562: error: 'HCI_EVENT_LINK_KEY_REQUEST' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:564: warning: implicit declaration of function 'bt_flip_addr'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:564: error: 'event_addr' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:565: error: 'hci_link_key_request_negative_reply' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:568: error: 'HCI_EVENT_PIN_CODE_REQUEST' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:571: error: 'hci_pin_code_request_reply' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:576: error: 'L2CAP_EVENT_CHANNEL_OPENED' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:579: warning: implicit declaration of function 'READ_BT_16'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:581: error: 'con_handle' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:599: error: 'HCI_EVENT_DISCONNECTION_COMPLETE' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:605: error: 'HCI_EVENT_COMMAND_COMPLETE' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:607: warning: implicit declaration of function 'COMMAND_COMPLETE_EVENT'
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:608: error: 'l2cap_create_channel' undeclared (first use in this function)
+o/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:608: error: 'addr' undeclared (first use in this function)
+lSLF07#2@66"Compile /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#323104492#0(6755"In file included from /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:9:/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h:18:29: error: btstack/btstack.h: No such file or directory/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'addr'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:45: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'con_handle'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController stop]':/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:62: warning: implicit declaration of function 'bt_close'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController runBluetooth]':/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: warning: implicit declaration of function 'sscan_bd_addr'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: error: 'addr' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: error: (Each undeclared identifier is reported only once/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:73: error: for each function it appears in.)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:74: warning: implicit declaration of function 'run_loop_init'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:74: error: 'RUN_LOOP_POSIX' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:75: warning: implicit declaration of function 'bt_open'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:81: warning: implicit declaration of function 'print_bd_addr'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:83: warning: implicit declaration of function 'bt_register_packet_handler'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:84: warning: implicit declaration of function 'bt_send_cmd'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:84: error: 'btstack_set_power_mode' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:84: error: 'HCI_POWER_ON' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:85: warning: implicit declaration of function 'run_loop_execute'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function '-[iLiveViewViewController handleLiveViewMessage:withData:]':/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:185: error: 'i' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:97: warning: unused variable 'sc'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:97: warning: unused variable 'sb'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:97: warning: unused variable 'sa'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:96: warning: unused variable 'menuId'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:95: warning: unused variable 'navigation'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:94: warning: unused variable 'c'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:93: warning: unused variable 'number'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function 'rfcomm_send_packet':/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:380: warning: implicit declaration of function 'crc8_calc'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:381: warning: implicit declaration of function 'bt_send_l2cap'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m: In function 'packet_handler':/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:425: error: 'bd_addr_t' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:425: error: expected ';' before 'event_addr'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:435: error: 'L2CAP_DATA_PACKET' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:486: warning: implicit declaration of function 'hexdump'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:545: error: 'HCI_EVENT_PACKET' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:549: error: 'BTSTACK_EVENT_POWERON_FAILED' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:555: error: 'BTSTACK_EVENT_STATE' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:557: error: 'HCI_STATE_WORKING' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:558: error: 'hci_write_authentication_enable' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:562: error: 'HCI_EVENT_LINK_KEY_REQUEST' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:564: warning: implicit declaration of function 'bt_flip_addr'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:564: error: 'event_addr' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:565: error: 'hci_link_key_request_negative_reply' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:568: error: 'HCI_EVENT_PIN_CODE_REQUEST' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:571: error: 'hci_pin_code_request_reply' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:576: error: 'L2CAP_EVENT_CHANNEL_OPENED' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:579: warning: implicit declaration of function 'READ_BT_16'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:581: error: 'con_handle' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:599: error: 'HCI_EVENT_DISCONNECTION_COMPLETE' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:605: error: 'HCI_EVENT_COMMAND_COMPLETE' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:607: warning: implicit declaration of function 'COMMAND_COMPLETE_EVENT'/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:608: error: 'l2cap_create_channel' undeclared (first use in this function)/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m:608: error: 'addr' undeclared (first use in this function)48(4@44"Btstack/btstack.h: No such file or directory323104492#84#118#2(7@80"In file included from /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#18446744073709551615#0#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#9#0#9#0#0"0(13@106"Btstack/btstack.h: No such file or directory in /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h323104492#18446744073709551615#0#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h323051059#18#0#18#0#0"0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.h323051059#18#0#18#0#28"*: No such file or directory0(4@62"Expected '=', ',', ';', 'asm' or '__attribute__' before 'addr'323104492#202#133#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#44#0#44#0#19"expected * before *0(4@68"Expected '=', ',', ';', 'asm' or '__attribute__' before 'con_handle'323104492#335#139#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#45#0#45#0#19"expected * before *0(22@43"Implicit declaration of function 'bt_close'323104492#581#116#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#62#0#62#0#36"implicit declaration of function '*'0(22@48"Implicit declaration of function 'sscan_bd_addr'323104492#812#121#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#73#0#73#0#36"implicit declaration of function '*'0(4@46"'addr' undeclared (first use in this function)323104492#933#117#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#73#0#73#0#43"'*' undeclared (first use in this function)0(22@48"Implicit declaration of function 'run_loop_init'323104492#1274#121#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#74#0#74#0#36"implicit declaration of function '*'0(4@56"'RUN_LOOP_POSIX' undeclared (first use in this function)323104492#1395#127#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#74#0#74#0#43"'*' undeclared (first use in this function)0(22@42"Implicit declaration of function 'bt_open'323104492#1522#115#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#75#0#75#0#36"implicit declaration of function '*'0(22@48"Implicit declaration of function 'print_bd_addr'323104492#1637#121#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#81#0#81#0#36"implicit declaration of function '*'0(22@61"Implicit declaration of function 'bt_register_packet_handler'323104492#1758#134#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#83#0#83#0#36"implicit declaration of function '*'0(22@46"Implicit declaration of function 'bt_send_cmd'323104492#1892#119#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#84#0#84#0#36"implicit declaration of function '*'0(4@64"'btstack_set_power_mode' undeclared (first use in this function)323104492#2011#135#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#84#0#84#0#43"'*' undeclared (first use in this function)0(4@54"'HCI_POWER_ON' undeclared (first use in this function)323104492#2146#125#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#84#0#84#0#43"'*' undeclared (first use in this function)0(22@51"Implicit declaration of function 'run_loop_execute'323104492#2271#124#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#85#0#85#0#36"implicit declaration of function '*'0(4@43"'i' undeclared (first use in this function)323104492#2529#115#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#185#0#185#0#43"'*' undeclared (first use in this function)0(22@20"Unused variable 'sc'323104492#2644#93#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#97#0#97#0#19"unused variable '*'0(22@20"Unused variable 'sb'323104492#2737#93#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#97#0#97#0#19"unused variable '*'0(22@20"Unused variable 'sa'323104492#2830#93#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#97#0#97#0#19"unused variable '*'0(22@24"Unused variable 'menuId'323104492#2923#97#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#96#0#96#0#19"unused variable '*'0(22@28"Unused variable 'navigation'323104492#3020#101#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#95#0#95#0#19"unused variable '*'0(22@19"Unused variable 'c'323104492#3121#92#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#94#0#94#0#19"unused variable '*'0(22@24"Unused variable 'number'323104492#3213#97#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#93#0#93#0#19"unused variable '*'0(22@44"Implicit declaration of function 'crc8_calc'323104492#3404#118#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#380#0#380#0#36"implicit declaration of function '*'0(22@48"Implicit declaration of function 'bt_send_l2cap'323104492#3522#122#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#381#0#381#0#36"implicit declaration of function '*'0(4@51"'bd_addr_t' undeclared (first use in this function)323104492#3734#123#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#425#0#425#0#43"'*' undeclared (first use in this function)0(4@32"Expected ';' before 'event_addr'323104492#3857#104#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#425#0#425#0#19"expected * before *0(4@59"'L2CAP_DATA_PACKET' undeclared (first use in this function)323104492#3961#131#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#435#0#435#0#43"'*' undeclared (first use in this function)0(22@42"Implicit declaration of function 'hexdump'323104492#4092#116#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#486#0#486#0#36"implicit declaration of function '*'0(4@58"'HCI_EVENT_PACKET' undeclared (first use in this function)323104492#4208#130#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#545#0#545#0#43"'*' undeclared (first use in this function)0(4@70"'BTSTACK_EVENT_POWERON_FAILED' undeclared (first use in this function)323104492#4338#142#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#549#0#549#0#43"'*' undeclared (first use in this function)0(4@61"'BTSTACK_EVENT_STATE' undeclared (first use in this function)323104492#4480#133#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#555#0#555#0#43"'*' undeclared (first use in this function)0(4@59"'HCI_STATE_WORKING' undeclared (first use in this function)323104492#4613#131#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#557#0#557#0#43"'*' undeclared (first use in this function)0(4@73"'hci_write_authentication_enable' undeclared (first use in this function)323104492#4744#145#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#558#0#558#0#43"'*' undeclared (first use in this function)0(4@68"'HCI_EVENT_LINK_KEY_REQUEST' undeclared (first use in this function)323104492#4889#140#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#562#0#562#0#43"'*' undeclared (first use in this function)0(22@47"Implicit declaration of function 'bt_flip_addr'323104492#5029#121#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#564#0#564#0#36"implicit declaration of function '*'0(4@52"'event_addr' undeclared (first use in this function)323104492#5150#124#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#564#0#564#0#43"'*' undeclared (first use in this function)0(4@77"'hci_link_key_request_negative_reply' undeclared (first use in this function)323104492#5274#149#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#565#0#565#0#43"'*' undeclared (first use in this function)0(4@68"'HCI_EVENT_PIN_CODE_REQUEST' undeclared (first use in this function)323104492#5423#140#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#568#0#568#0#43"'*' undeclared (first use in this function)0(4@68"'hci_pin_code_request_reply' undeclared (first use in this function)323104492#5563#140#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#571#0#571#0#43"'*' undeclared (first use in this function)0(4@68"'L2CAP_EVENT_CHANNEL_OPENED' undeclared (first use in this function)323104492#5703#140#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#576#0#576#0#43"'*' undeclared (first use in this function)0(22@45"Implicit declaration of function 'READ_BT_16'323104492#5843#119#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#579#0#579#0#36"implicit declaration of function '*'0(4@52"'con_handle' undeclared (first use in this function)323104492#5962#124#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#581#0#581#0#43"'*' undeclared (first use in this function)0(4@74"'HCI_EVENT_DISCONNECTION_COMPLETE' undeclared (first use in this function)323104492#6086#146#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#599#0#599#0#43"'*' undeclared (first use in this function)0(4@68"'HCI_EVENT_COMMAND_COMPLETE' undeclared (first use in this function)323104492#6232#140#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#605#0#605#0#43"'*' undeclared (first use in this function)0(22@57"Implicit declaration of function 'COMMAND_COMPLETE_EVENT'323104492#6372#131#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#607#0#607#0#36"implicit declaration of function '*'0(4@62"'l2cap_create_channel' undeclared (first use in this function)323104492#6503#134#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#608#0#608#0#43"'*' undeclared (first use in this function)0(4@46"'addr' undeclared (first use in this function)323104492#6637#118#0(6@58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m323104492#608#0#608#0#43"'*' undeclared (first use in this function)0(0#0#58"/Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m8630238080#1846"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator -I/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources/i386 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-fqzlarryydbiylgqhozjarzzbfia/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/Classes/iLiveViewViewController.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/iLiveViewViewController.o1#
+
+CCompileC build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/main.o /Users/Ari/dev/iLiveView/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323104435.026606
+e323104435.163269
+r1
+xCompileC
+xbuild/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/main.o
+x/Users/Ari/dev/iLiveView/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@39"Compile /Users/Ari/dev/iLiveView/main.m323104435#323104435#0(0"0(0#0#31"/Users/Ari/dev/iLiveView/main.m8635638912#1800"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator -I/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources/i386 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources -include /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-fqzlarryydbiylgqhozjarzzbfia/iLiveView_Prefix.pch -c /Users/Ari/dev/iLiveView/main.m -o /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/Ari/dev/iLiveView/MainWindow.xib
+s323104433.821068
+e323104434.274387
+r1
+xCompileXIB
+x/Users/Ari/dev/iLiveView/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib323104433#323104434#0(0"0(0#0#39"/Users/Ari/dev/iLiveView/MainWindow.xib8621930496#530"    cd /Users/Ari/dev/iLiveView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/MainWindow.nib /Users/Ari/dev/iLiveView/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/Ari/dev/iLiveView/iLiveViewViewController.xib
+s323104433.821723
+e323104434.274611
+r1
+xCompileXIB
+x/Users/Ari/dev/iLiveView/iLiveViewViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@38"CompileXIB iLiveViewViewController.xib323104433#323104434#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#52"/Users/Ari/dev/iLiveView/iLiveViewViewController.xib8621690880#556"    cd /Users/Ari/dev/iLiveView    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/iLiveViewViewController.nib /Users/Ari/dev/iLiveView/iLiveViewViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCpResource build/Debug-iphonesimulator/iLiveView.app/MusicPause.png MusicPause.png
+r0
+
+CCpResource build/Debug-iphonesimulator/iLiveView.app/MusicPlay.png MusicPlay.png
+r0
+
+CCpResource build/Debug-iphonesimulator/iLiveView.app/fail.png fail.png
+r0
+
+CCpResource build/Debug-iphonesimulator/iLiveView.app/logprevu.png logprevu.png
+s323104433.822432
+e323104433.878767
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/iLiveView.app/logprevu.png
+xlogprevu.png
+lSLF07#2@17"Copy logprevu.png323104433#323104433#0(0"0(0#0#37"/Users/Ari/dev/iLiveView/logprevu.png8621594976#430"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Ari/dev/iLiveView/logprevu.png /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app0#
+
+CCpResource build/Debug-iphonesimulator/iLiveView.app/music.png music.png
+r0
+
+CCpResource build/Debug-iphonesimulator/iLiveView.app/prevue_sw.png prevue_sw.png
+r0
+
+CCpResource build/Debug-iphonesimulator/iLiveView.app/success.png success.png
+r0
+
+CCpResource build/Debug-iphonesimulator/iLiveView.app/vue.png vue.png
+r0
+
+CCpResource build/Debug-iphonesimulator/iLiveView.app/vue_sw.png vue_sw.png
+r0
+
+CGenerateDSYMFile /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app.dSYM /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/iLiveView
+r0
+
+CLd /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/iLiveView normal i386
+r0
+
+CProcessInfoPlistFile /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/Info.plist iLiveView-Info.plist
+s323104433.816067
+e323104433.820973
+r1
+xProcessInfoPlistFile
+x/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/Info.plist
+xiLiveView-Info.plist
+lSLF07#2@28"Process iLiveView-Info.plist323104433#323104433#0(0"0(0#0#45"/Users/Ari/dev/iLiveView/iLiveView-Info.plist8634906272#443"    cd /Users/Ari/dev/iLiveView    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility iLiveView-Info.plist -genpkginfo /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app/Info.plist0#
+
+CProcessPCH /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-fqzlarryydbiylgqhozjarzzbfia/iLiveView_Prefix.pch.gch iLiveView_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s323104434.274719
+e323104435.026479
+r1
+xProcessPCH
+x/var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-fqzlarryydbiylgqhozjarzzbfia/iLiveView_Prefix.pch.gch
+xiLiveView_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile iLiveView_Prefix.pch323104434#323104435#0(0"0(0#0#45"/Users/Ari/dev/iLiveView/iLiveView_Prefix.pch8635775456#1704"    cd /Users/Ari/dev/iLiveView    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-generated-files.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-own-target-headers.hmap -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-all-target-headers.hmap -iquote /Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/iLiveView-project-headers.hmap -F/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator -I/Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/include -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources/i386 -I/Users/Ari/dev/iLiveView/build/iLiveView.build/Debug-iphonesimulator/iLiveView.build/DerivedSources -c /Users/Ari/dev/iLiveView/iLiveView_Prefix.pch -o /var/folders/3T/3T4wSCAJE3Go3ruCwjtV5++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-fqzlarryydbiylgqhozjarzzbfia/iLiveView_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/hR/hR9wtiNSEH4ru0LdNlEwBU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iLiveView_Prefix-gjzmypyrjlrbliaavxrjoowfvtfv/iLiveView_Prefix.pch.gch iLiveView_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CTouch /Users/Ari/dev/iLiveView/build/Debug-iphonesimulator/iLiveView.app
+r0
+
