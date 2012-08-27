@@ -26,13 +26,13 @@
 		0240D5F715EC18FB00B4B586 /* prevue_sw.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5EE15EC18FB00B4B586 /* prevue_sw.png */; };
 		0240D5F815EC18FB00B4B586 /* vue_sw.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5EF15EC18FB00B4B586 /* vue_sw.png */; };
 		0240D5F915EC18FB00B4B586 /* vue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0240D5F015EC18FB00B4B586 /* vue.png */; };
+		0240D5FD15EC1A3800B4B586 /* libBTstack.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0240D5FC15EC1A3800B4B586 /* libBTstack.dylib */; };
 		02A3F27215A3A07B0091AECF /* iLiveViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A3F26815A3A07B0091AECF /* iLiveViewAppDelegate.m */; };
 		02A3F27315A3A07B0091AECF /* iLiveViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A3F26A15A3A07B0091AECF /* iLiveViewViewController.m */; };
 		02F4D15415A3AD030018B8A8 /* BTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4D14E15A3AD030018B8A8 /* BTDevice.m */; };
 		02F4D15515A3AD030018B8A8 /* BTDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4D14F15A3AD030018B8A8 /* BTDiscoveryViewController.m */; };
 		02F4D15615A3AD030018B8A8 /* BTInquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4D15015A3AD030018B8A8 /* BTInquiryViewController.m */; };
 		02F4D15815A3AD030018B8A8 /* BTstackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F4D15315A3AD030018B8A8 /* BTstackManager.m */; };
-		02F4D15A15A3E1610018B8A8 /* libBTstacknews.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F4D15915A3E1610018B8A8 /* libBTstacknews.dylib */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -69,6 +69,7 @@
 		0240D5EE15EC18FB00B4B586 /* prevue_sw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prevue_sw.png; path = "liveview/layout/Library/Application Support/LiveView/prevue_sw.png"; sourceTree = "<group>"; };
 		0240D5EF15EC18FB00B4B586 /* vue_sw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vue_sw.png; path = "liveview/layout/Library/Application Support/LiveView/vue_sw.png"; sourceTree = "<group>"; };
 		0240D5F015EC18FB00B4B586 /* vue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vue.png; path = "liveview/layout/Library/Application Support/LiveView/vue.png"; sourceTree = "<group>"; };
+		0240D5FC15EC1A3800B4B586 /* libBTstack.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libBTstack.dylib; path = liveview/libBTstack.dylib; sourceTree = "<group>"; };
 		02A3F26715A3A07B0091AECF /* iLiveViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveViewAppDelegate.h; sourceTree = "<group>"; };
 		02A3F26815A3A07B0091AECF /* iLiveViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveViewAppDelegate.m; sourceTree = "<group>"; };
 		02A3F26915A3A07B0091AECF /* iLiveViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveViewViewController.h; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		02F4D14F15A3AD030018B8A8 /* BTDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDiscoveryViewController.m; sourceTree = "<group>"; };
 		02F4D15015A3AD030018B8A8 /* BTInquiryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTInquiryViewController.m; sourceTree = "<group>"; };
 		02F4D15315A3AD030018B8A8 /* BTstackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTstackManager.m; sourceTree = "<group>"; };
-		02F4D15915A3E1610018B8A8 /* libBTstacknews.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libBTstacknews.dylib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* iLiveView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLiveView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -98,7 +98,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				0220E05C13424643007D3830 /* MediaPlayer.framework in Frameworks */,
-				02F4D15A15A3E1610018B8A8 /* libBTstacknews.dylib in Frameworks */,
+				0240D5FD15EC1A3800B4B586 /* libBTstack.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +212,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02F4D15915A3E1610018B8A8 /* libBTstacknews.dylib */,
+				0240D5FC15EC1A3800B4B586 /* libBTstack.dylib */,
 				0220E05B13424643007D3830 /* MediaPlayer.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -330,6 +330,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/liveview\"",
 				);
 				PRODUCT_NAME = iLiveView;
 				SDKROOT = iphoneos;
@@ -349,6 +350,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/liveview\"",
 				);
 				PRODUCT_NAME = iLiveView;
 				SDKROOT = iphoneos;
