@@ -10,10 +10,15 @@
 
 @interface LVController (Private)
 
-- (void)sendData:(void *)data length:(int)length;
-- (void)sendMessage:(LiveViewMessageType)type withInteger:(uint8_t)integer;
+- (void)sendData:(void *)data length:(NSUInteger)remainingData;
 - (void)handleScreenStatus;
 - (void)handleMusicAction;
+
+#pragma mark - Internal messages
+- (void)sendAckMessage:(LiveViewMessageType)type;
+- (void)sendSetMenuSize:(NSUInteger)size;
+- (void)sendGetTimeResponse;
+- (void)sendResult:(LiveViewResult_t)result message:(LiveViewMessageType)type;
 
 - (NSString *)pathForImage:(NSString *)image;
 
@@ -23,51 +28,54 @@
 
 @synthesize delegate, menuItems;
 
-#pragma Message receiving and responding
+#pragma mark - Message receiving and responding
 
-- (void)handleLiveViewMessage:(LiveViewMessageType)msg withData:(NSData *)data {
+- (void)handleLiveViewMessage:(LVMessage *)message legacyNSData:(NSData *)legacyData {
+    LiveViewMessageType type = message->header.type;
+    
 	NSMutableData *output = [[NSMutableData alloc] init];
 	int i = 0, navigation = 0, menuId = 0;
-	NSString *sa, *sb, *sc, *softwareVersion;
-	[output appendint8:msg];
-	[self sendMessage:kMessageAck withData:output];
-	switch (msg) {
-		case kMessageGetCaps_Resp:
-			width = height = statusBarWidth = statusBarHeight = viewWidth = viewHeight= announceWidth = announceHeight = textChunkSize = idleTimer = 0;
-			[data deserializeWithFormat:@">BBBBBBBBBBs", &width, &height, &statusBarWidth, &statusBarHeight, &viewWidth, &viewHeight, &announceWidth, &announceHeight, &textChunkSize, &idleTimer, &softwareVersion];
-			[delegate setVersion:softwareVersion];
-			[output setLength:0];
-			[output appendint8:(disableMenu)?0:[menuItems count]];
-			[self sendMessage:kMessageSetMenuSize withData:output];
-			disableMenu = FALSE;
+	NSString *sa, *sb, *sc;
+	[self sendAckMessage:type];
+	switch (type) {
+		case kMessageGetCaps_Resp: {
+            LVMessageGetCaps_Resp *getCaps = (LVMessageGetCaps_Resp *)message;
+            width = getCaps->width;
+            height = getCaps->height;
+            statusBarWidth = getCaps->statusBarWidth;
+            statusBarHeight = getCaps->statusBarHeight;
+            viewWidth = getCaps->viewWidth;
+            viewHeight = getCaps->viewHeight;
+            announceWidth = getCaps->announceWidth;
+            announceHeight = getCaps->announceWidth;
+            textChunkSize = getCaps->textChunkSize;
+            idleTimer = getCaps->idleTimer;
+            
+            NSString *softwareVersion = [[NSString alloc] initWithBytes:&getCaps->softwareVersion length:getCaps->versionLength encoding:NSUTF8StringEncoding];
+            [delegate setVersion:softwareVersion];
+            [softwareVersion release];
+            
+			[self sendSetMenuSize:(self.menuDisabled ? 0 : menuItems.count)];
+			_menuDisabled = FALSE;
 			break;
             
-		case kMessageGetTime:
-			[output setLength:0];
-			NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-			[dateFormatter setDateStyle:NSDateFormatterNoStyle];
-			[dateFormatter setTimeStyle:NSDateFormatterLongStyle];
-			int use24HourClock = ([[dateFormatter dateFormat] rangeOfString:@"a"].location != NSNotFound)? 1 : 0;
-			[dateFormatter release];
-			NSDate *currentDate = [[NSDate alloc] init];
-			int currentTime = [currentDate timeIntervalSince1970] + [[NSTimeZone localTimeZone] secondsFromGMTForDate:currentDate];
-            [currentDate release];
-			[output serializeWithFormat:@"LB", currentTime, use24HourClock];
-			[self sendMessage:kMessageGetTime_Resp withData:output];
+		} case kMessageGetTime:
+			[self sendGetTimeResponse];
 			break;
             
-		case kMessageDeviceStatus:
-			[data deserializeWithFormat:@">B", &screenStatus];
-			[output setLength:0];
-			[output appendint8:kResultOK];
-			[self sendMessage:kMessageDeviceStatus_Resp withData:output];
+		case kMessageDeviceStatus: {
+            LVMessageDeviceStatus *deviceStatus = (LVMessageDeviceStatus *)message;
+            screenStatus = deviceStatus->screenStatus;
+            
+			[self sendResult:kResultOK message:kMessageDeviceStatus_Resp];
             [self performSelectorOnMainThread:@selector(handleScreenStatus) withObject:nil waitUntilDone:NO];
 			break;
+        }
             
 		case kMessageNavigation:
 			i = navigation = menuItemId = menuId = 0;
-			[data deserializeWithFormat:@">HBBB", &i, &navigation, &menuItemId, &menuId];
-			if (i != 3) NSLog(@"Unexpected navigation message length: %d [%@]", i, data);
+			[legacyData deserializeWithFormat:@">HBBB", &i, &navigation, &menuItemId, &menuId];
+			if (i != 3) NSLog(@"Unexpected navigation message length: %d [%@]", i, legacyData);
 			else if (menuId != 10 && menuId != 20) NSLog(@"Unexpected navigation menu ID: %d", menuId);
 			else if (navigation != 32 && (navigation < 1 || navigation > 15)) NSLog(@"Navigation type out of range: %d", navigation);
 			else {
@@ -86,34 +94,34 @@
                 if (navAction == kActionLongPress && navType == kNavSelect) {
                     inMusicMode = TRUE;
                     [output appendint8:kResultOK];
-                    [self sendMessage:kMessageNavigation_Resp withData:output];
+                    [self sendMessage:kMessageNavigation_Resp withNSData:output];
                     [self sendMusicDisplayPanel];
                     [[MPMusicPlayerController iPodMusicPlayer] beginGeneratingPlaybackNotifications];
                 } else if (navAction == kActionPress && navType == kNavMenuSelect) {
                     [output appendint8:kResultExit];
-                    [self sendMessage:kMessageNavigation_Resp withData:output];
+                    [self sendMessage:kMessageNavigation_Resp withNSData:output];
                     [[[menuItems objectAtIndex:currentMenuId] itemAtCurrentIndex] sendToPhone];
                 } else {
                     [output appendint8:kResultExit];
-                    [self sendMessage:kMessageNavigation_Resp withData:output];
+                    [self sendMessage:kMessageNavigation_Resp withNSData:output];
                 }
             }
 			
 			break;
             
-		case kMessageGetMenuItem:
-            [data deserializeWithFormat:@">B", &i];
-            [self sendMenuItem:i];
-             break;
+		case kMessageGetMenuItem: {
+            LVMessageGetMenuItem *getMenuItem = (LVMessageGetMenuItem *)message;
+            [self sendMenuItem:getMenuItem->index];
+            break;
             
-		case kMessageGetMenuItems:
+		} case kMessageGetMenuItems:
             for (i=0; i<[menuItems count]; i++) {
                 [self sendMenuItem:i];
             }
 			break;
             
 		case kMessageGetAlert:
-			[data deserializeWithFormat:@">BBHsss", &menuItemId, &alertAction, &maxBodySize, &sa, &sb, &sc];
+			[legacyData deserializeWithFormat:@">BBHsss", &menuItemId, &alertAction, &maxBodySize, &sa, &sb, &sc];
 			if ([sa length] || [sb length] || [sc length]) {
 				NSLog(@"GetAlert with non-zero text: %@, %@, %@",sa,sb,sc);
 			}
@@ -144,19 +152,15 @@
 			[output serializeWithFormat:@">BHHHBB", 0, [menuItem total], menuItem.unread, menuItem.currentIndex, 0, 0];
 			[output serializeWithFormat:@">SSSBL",  alertItem.time, alertItem.header, alertItem.body, 0, [image length]];
 			[output appendData:image];
-			[self sendMessage:kMessageGetAlert_Resp withData:output];
+			[self sendMessage:kMessageGetAlert_Resp withNSData:output];
 			break;
             
 		case kMessageSetStatusBar_Resp:
-			[output setLength:0];
-			[output appendint8:5];
-			[output appendint8:12];
-			[output appendint8:0];
-			[self sendMessage:kMessageSetMenuSettings withData:output];
+            [self sendSetMenuSettingsWithVibration:5 fontSize:12 menuID:0];
 			break;
             
 		default:
-			NSLog(@"Message %d with data [%@]\n", msg, data);
+			NSLog(@"Message %d with legacyData [%@]\n", type, legacyData);
 			break;
 	}
     [output release];
@@ -204,21 +208,27 @@
     }
 }
 
+#pragma mark - Raw sending and receiving
+
 - (void)processData:(void *)dataPointer length:(size_t)dataLength {
     while (dataLength >= sizeof(LVMessageHeader)) {
         LVMessage *message = (LVMessage *)dataPointer;
-        LVMessageHeader header = message->header;
-        uint32_t receivedLength = OSSwapInt32(header.length); // Reverse endianness
-        if (receivedLength > dataLength) receivedLength = dataLength-sizeof(LVMessageHeader); // Prevent possible buffer underflow
+        LVMessageHeader *header = &message->header;
         
-        if (header.headerlength == 4) {
-            NSLog(@"Received message %d with data ", header.type);
+        header->length = OSSwapInt32(header->length); // Reverse endianness
+        if (header->length > dataLength)
+            header->length = dataLength-sizeof(LVMessageHeader); // Prevent possible buffer underflow
+        
+        if (header->headerlength == 4) {
+            NSUInteger receivedLength = header->length;
+            NSLog(@"Received message %d with data ", header->type);
             hexdump(&message->data, receivedLength);
+            
             @try {
-                [self handleLiveViewMessage:header.type withData:[NSData dataWithBytes:&message->data length:receivedLength]];
+                [self handleLiveViewMessage:message legacyNSData:[NSData dataWithBytes:&message->data length:receivedLength]];
             }
             @catch (NSException *exception) {
-                NSLog(@"Message handler exception! Ignoring...");
+                NSLog(@"Message handler exception! %@", exception);
             }
             dataPointer += receivedLength+sizeof(LVMessageHeader);
             dataLength -= receivedLength+sizeof(LVMessageHeader);
@@ -231,48 +241,14 @@
         NSLog(@"Recieved unanticipated extra data in packet: ");
         hexdump(dataPointer, dataLength);
     }
-
-    /*// Consider rewriting this to parse data as C structures instead of reading from NSData
-	NSData *data = [NSData dataWithBytes:dataPointer length:dataLength];
-	uint8_t msg, headlen;
-	uint32_t datalen;
-	
-	while ([data length] >= 6) {
-		[data getBytes:&msg range:NSMakeRange(0,1)];
-		[data getBytes:&headlen range:NSMakeRange(1,1)];
-		if (headlen == 4) {
-			[data getBytes:&datalen range:NSMakeRange(2,4)];
-			datalen = ntohl(datalen);
-            if (datalen > [data length]) datalen = [data length]; // Prevent possible buffer overflow
-			NSLog(@"Received message %d with data [%@] on channel id %d", msg, data, 1);
-            @try {
-                [self handleLiveViewMessage:msg withData:[data subdataWithRange:NSMakeRange(6, datalen)]];
-            }
-            @catch (NSException *exception) {
-                NSLog(@"Data length exception! Ignoring.");
-            }
-			data = [data subdataWithRange:NSMakeRange(6+datalen, [data length]-6-datalen)];
-		} else {
-			NSLog(@"Received data [%@] on channel id %d", data, 1);
-			data = [data subdataWithRange:NSMakeRange(0, 0)];
-		}
-	}
-	if ([data length] > 0) {
-		NSLog(@"Received data [%@] on channel id %d", data, 1);
-	}*/
 }
 
-#pragma Data sending
-
-- (void)sendData:(void *)data length:(int)length {
+- (void)sendData:(void *)data length:(NSUInteger)remainingData {
     int packetLength;
     
-    int channelMTU = channel_mtu;
-	int remainingData = length;
-    
-    if (channelMTU) {
+    if (channel_mtu) {
         while(remainingData) {
-            packetLength = (remainingData > channelMTU) ? channelMTU : remainingData;
+            packetLength = (remainingData > channel_mtu) ? channel_mtu : remainingData;
             
             LVSendRawData(data, packetLength);
             NSLog(@"Wrote %d bytes.", packetLength);
@@ -283,33 +259,101 @@
     }
 }
 
-- (void)sendMessage:(LiveViewMessageType)type withData:(const void *)data length:(int)length {    
-    int payloadLength = sizeof(LVMessageHeader)+length;
+#pragma mark - Message sending
+
+- (void)sendMessage:(void *)message {
+    LVMessageHeader *header = &((LVMessage *)message)->header;
+    NSLog(@"Sending message %d with data ", header->type);
+    hexdump(&((LVMessage *)message)->data, header->length);
     
-    LVMessage *message = malloc(payloadLength);
+    uint32_t messageLength = header->length;
+    header->headerlength = 4;
+    header->length = OSSwapInt32(messageLength);
+    
+    [self sendData:message length:sizeof(LVMessageHeader)+messageLength];
+}
+
+- (void)sendMessage:(LiveViewMessageType)type withData:(const void *)data length:(NSUInteger)length { 
+    LVMessage *message = malloc(sizeof(LVMessageHeader)+length);
     LVMessageHeader *header = &message->header;
     
     header->type = type;
-    header->headerlength = 4;
-    header->length = OSSwapInt32(length);
+    header->length = length;
     memcpy(&message->data, data, length);
     
-    [self sendData:message length:payloadLength];
+    [self sendMessage:message];
     
     free(message);
 }
 
-- (void)sendMessage:(LiveViewMessageType)type withData:(NSData *)data {
-    NSLog(@"Sending message %d with data %@.", type, data);
-
+- (void)sendMessage:(LiveViewMessageType)type withNSData:(NSData *)data {
 	[self sendMessage:type withData:[data bytes] length:[data length]];
+}
+
+- (void)sendMessage:(LiveViewMessageType)type withString:(NSString *)string {
+    [self sendMessage:type withNSData:[string dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (void)sendMessage:(LiveViewMessageType)type withInteger:(uint8_t)integer {
     [self sendMessage:type withData:&integer length:1];
 }
 
-#pragma Messages
+- (void)sendResult:(LiveViewResult_t)result message:(LiveViewMessageType)type {
+    [self sendMessage:type withInteger:result];
+}
+
+#pragma mark - Messages
+
+- (void)sendAckMessage:(LiveViewMessageType)type {
+	[self sendMessage:kMessageAck withInteger:type];
+}
+
+- (void)sendGetCaps {
+    [self sendMessage:kMessageGetCaps withString:@"0.0.6"];
+}
+
+- (void)sendSetMenuSize:(NSUInteger)size {
+    [self sendMessage:kMessageSetMenuSize withInteger:size];
+}
+
+- (void)sendGetTimeResponse {
+    NSDate *date = [NSDate date];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterNoStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterLongStyle];
+    BOOL use24HourClock = [[dateFormatter dateFormat] rangeOfString:@"a"].location != NSNotFound;
+    [dateFormatter release];  
+    
+    LVMessageGetTime_Resp message;
+    message.header.type = kMessageGetTime_Resp;
+    message.header.length = sizeof(message);
+    message.currentTime = OSSwapInt32([date timeIntervalSince1970] + [[NSTimeZone localTimeZone] secondsFromGMTForDate:date]);
+    message.use24HourClock = use24HourClock ? 1 : 0;
+        
+    [self sendMessage:&message];
+}
+
+- (void)sendVibrateFor:(int)miliseconds afterDelay:(int)delayTime {
+    LVMessageSetVibrate message;
+    message.header.type = kMessageSetVibrate;
+    message.header.length = sizeof(message);
+    message.delayTime = OSSwapInt16(delayTime);
+    message.vibrationTime = OSSwapInt16(miliseconds);
+    
+	[self sendMessage:&message];
+}
+
+- (void)sendSetMenuSettingsWithVibration:(int)vibrationTime fontSize:(int)fontSize menuID:(int)itemID {
+    LVMessageSetMenuSettings message;
+    message.header.type = kMessageSetMenuSettings;
+    message.header.length = sizeof(message);
+    message.vibrationTime = vibrationTime;
+    message.fontSize = fontSize;
+    message.itemID = itemID;
+    
+	[self sendMessage:&message];
+}
 
 - (void)sendMenuItem:(int)item {
     LVMenuItem *menuItem = [menuItems objectAtIndex:item];
@@ -318,7 +362,7 @@
     [output serializeWithFormat:@">BHHHBBSSS", ([menuItem isAlertItem])?0:1, 0, [menuItem unread], 0, item+3, 0, @"", @"", menuItem.name];
     // is alert item, ?, unread count, ?, menu item id + 3 for some reason, plaintext v bitmapimage string, unused field, unused field, title
     [output appendData:[[[NSData alloc] initWithContentsOfFile:[self pathForImage:menuItem.icon]] autorelease]];
-    [self sendMessage:kMessageGetMenuItem_Resp withData:output];
+    [self sendMessage:kMessageGetMenuItem_Resp withNSData:output];
     [output release];
 }
 
@@ -327,32 +371,44 @@
     [self sendMusicDisplayPanel];
 }
 
-- (void)setStatusBarWithItem:(int)itemID andAlerts:(int)unreadAlerts andImage:(NSString *)imageTitle {
-	NSMutableData *output = [[NSMutableData alloc] init];
-	[output serializeWithFormat:@">BHHHBB", 0, 0, unreadAlerts, 0, itemID+3, 0];
-	[output serializeWithFormat:@">H", 0];
-	[output serializeWithFormat:@">H", 0];
-	[output serializeWithFormat:@">H", 0];
+- (void)sendSetStatusBarWithItem:(int)itemID andAlerts:(int)unreadAlerts andImage:(NSString *)imageTitle {
+    NSData *imageData;
+    NSInteger imageLength = -1; // If there is no image, remove the placeholder imageData byte.
     if (imageTitle) {
-        NSData *imageData = [[NSData alloc] initWithContentsOfFile:[self pathForImage:imageTitle]];
-        [output appendData:imageData];
+        imageData = [[NSData alloc] initWithContentsOfFile:[self pathForImage:imageTitle]];
+        imageLength = [imageData length];
+    }
+    
+    NSInteger messageLength = sizeof(LVMessageSetStatusBar)+imageLength;
+    
+    LVMessageSetStatusBar *message = malloc(messageLength);
+    message->header.type = kMessageSetStatusBar;
+    message->header.length = messageLength;
+    message->unknown1 = 0;
+    message->unknown2 = OSSwapInt16(0);
+    message->unreadAlerts = OSSwapInt16(unreadAlerts);
+    message->unknown4 = OSSwapInt16(0);
+    message->menuItemID = itemID+3;
+    message->unknown6 = 0;
+    message->unknown7 = OSSwapInt16(0);
+    message->unknown8 = OSSwapInt16(0);
+    message->unknown9 = OSSwapInt16(0);
+    
+    if (imageLength) {
+        memcpy(&message->imageData, [imageData bytes], imageLength);
         [imageData release];
     }
-	[self sendMessage:kMessageSetStatusBar withData:output];
-    [output release];
-}
-
-- (void)setMenuSettingsWithVibration:(int)vibrationTime fontSize:(int)fontSize menuID:(int)itemID {
-	NSMutableData *output = [[[NSMutableData alloc] init] autorelease];
-	[output serializeWithFormat:@">BBB", vibrationTime, fontSize, itemID];
-	[self sendMessage:kMessageSetMenuSettings withData:nil];
+    
+    [self sendMessage:message];
+    
+    free(message);
 }
 
 - (void)displayBitmapWithX:(int)x andY:(int)y andBitmap:(NSData *)bitmapData {
 	NSMutableData *output = [[[NSMutableData alloc] init] autorelease];
 	[output serializeWithFormat:@">BBB", x, y, 1];
 	[output appendData:bitmapData];
-	[self sendMessage:kMessageDisplayBitmap withData:output];
+	[self sendMessage:kMessageDisplayBitmap withNSData:output];
 }
 
 - (void)setScreenModeWithBrightness:(int)brightness andAuto:(int)autoTrue {
@@ -371,31 +427,12 @@
 	[output serializeWithFormat:@">B", 0];
 	[output appendString:bottomText];
 	if (bitmapName) [output appendData:[[[NSData alloc] initWithContentsOfFile:[self pathForImage:bitmapName]] autorelease]];
-	[self sendMessage:kMessageDisplayPanel withData:output];
+	[self sendMessage:kMessageDisplayPanel withNSData:output];
 }
 
-- (void)sendGetCaps {
-	NSMutableData *output = [[NSMutableData alloc] init];
-	[output appendString:@"0.0.6"];
-	[self sendMessage:kMessageGetCaps withData:output];
-    [output release];
-}
-
-- (IBAction)vibrate {
-	NSMutableData *output = [[NSMutableData alloc] init];
-	[output serializeWithFormat:@">HH", 1, 1000];
-	[self sendMessage:kMessageSetVibrate withData:output];
-    [output release];
-}
-
-- (void)enableMenu {
-    disableMenu = FALSE;
-	[self sendGetCaps];
-}
-
-- (void)disableMenu {
-	disableMenu = TRUE;
-	[self sendGetCaps];
+- (void)setMenuDisabled:(BOOL)menuDisabled {
+    _menuDisabled = menuDisabled;
+    [self sendGetCaps];
 }
 
 #pragma Support methods
@@ -405,11 +442,11 @@
     if (navAction == kActionLongPress && navType == kNavSelect) {
         inMusicMode = FALSE;
         [output appendint8:kResultExit];
-        [self sendMessage:kMessageNavigation_Resp withData:output];
+        [self sendMessage:kMessageNavigation_Resp withNSData:output];
         [[MPMusicPlayerController iPodMusicPlayer] endGeneratingPlaybackNotifications];
     } else {
         [output appendint8:kResultOK];
-        [self sendMessage:kMessageNavigation_Resp withData:output];
+        [self sendMessage:kMessageNavigation_Resp withNSData:output];
         switch (navType) {
             case kNavUp:
                 [[MPMusicPlayerController iPodMusicPlayer] setVolume:[[MPMusicPlayerController iPodMusicPlayer] volume]+0.0625];
@@ -493,17 +530,17 @@
 
 - (id)initWithDelegate:(id<LiveViewDelegate>)theDelegate {
     self = [super init];
+    if (!self)
+        return nil;
     
-    if (self != nil) {
-        LVControllerInstance = self;
-        self.delegate = theDelegate;
-        [NSThread detachNewThreadSelector:@selector(startBluetooth) toTarget:self withObject:nil];
-        MPMusicPlayerController *musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
-        NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-        [notificationCenter addObserver:self selector:@selector(handlePlaybackChange:) name:@"MPMusicPlayerControllerNowPlayingItemDidChangeNotification" object:musicPlayer];
-        [notificationCenter addObserver:self selector:@selector(handlePlaybackChange:) name:@"MPMusicPlayerControllerPlaybackStateDidChangeNotification" object:musicPlayer];
-        menuItems = [[NSMutableArray alloc] init];
-    }
+    LVControllerInstance = self;
+    self.delegate = theDelegate;
+    [NSThread detachNewThreadSelector:@selector(startBluetooth) toTarget:self withObject:nil];
+    MPMusicPlayerController *musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(handlePlaybackChange:) name:@"MPMusicPlayerControllerNowPlayingItemDidChangeNotification" object:musicPlayer];
+    [notificationCenter addObserver:self selector:@selector(handlePlaybackChange:) name:@"MPMusicPlayerControllerPlaybackStateDidChangeNotification" object:musicPlayer];
+    menuItems = [[NSMutableArray alloc] init];
     
 	return self;
 }
@@ -627,6 +664,11 @@
 }
 
 - (void)dealloc {
+    MPMusicPlayerController *musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:self name:@"MPMusicPlayerControllerNowPlayingItemDidChangeNotification" object:musicPlayer];
+    [notificationCenter removeObserver:self name:@"MPMusicPlayerControllerPlaybackStateDidChangeNotification" object:musicPlayer];
+    
     [super dealloc];
 }
 

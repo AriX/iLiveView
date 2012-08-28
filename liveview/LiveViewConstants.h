@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#pragma mark - Variables
+
 int channel_mtu;
+
+#pragma mark - Protocols
 
 @protocol LiveViewDelegate <NSObject>
 - (void)setScreenStatus:(NSString *)status;
@@ -17,6 +21,8 @@ int channel_mtu;
 - (void)setInitialized:(BOOL)initialized;
 - (void)setConnected:(BOOL)connected;
 @end
+
+# pragma mark - Messages
 
 enum {
 	kMessageGetCaps             = 1,
@@ -76,6 +82,8 @@ enum {
 };
 typedef uint8_t LiveViewMessageType;
 
+# pragma mark - Structures
+
 struct LVMessageHeader {
     uint8_t type;                 
     uint8_t headerlength;
@@ -88,6 +96,74 @@ struct LVMessage {
     uint8_t data;
 } __attribute__((__packed__));
 typedef struct LVMessage LVMessage;
+
+struct LVMessageGetCaps_Resp {
+    LVMessageHeader header;
+    uint8_t width;
+    uint8_t height;
+    uint8_t statusBarWidth;
+    uint8_t statusBarHeight;
+    uint8_t viewWidth;
+    uint8_t viewHeight;
+    uint8_t announceWidth;
+    uint8_t announceHeight;
+    uint8_t textChunkSize;
+    uint8_t idleTimer;
+    uint8_t versionLength;
+    char softwareVersion;
+} __attribute__((__packed__));
+typedef struct LVMessageGetCaps_Resp LVMessageGetCaps_Resp;
+
+struct LVMessageGetTime_Resp {
+    LVMessageHeader header;
+    uint32_t currentTime;
+    uint8_t use24HourClock;
+} __attribute__((__packed__));
+typedef struct LVMessageGetTime_Resp LVMessageGetTime_Resp;
+
+struct LVMessageDeviceStatus {
+    LVMessageHeader header;
+    uint8_t screenStatus;
+} __attribute__((__packed__));
+typedef struct LVMessageDeviceStatus LVMessageDeviceStatus;
+
+struct LVMessageGetMenuItem {
+    LVMessageHeader header;
+    uint8_t index;
+} __attribute__((__packed__));
+typedef struct LVMessageGetMenuItem LVMessageGetMenuItem;
+
+struct LVMessageSetMenuSettings {
+    LVMessageHeader header;
+    uint8_t vibrationTime;
+    uint8_t fontSize;
+    uint8_t itemID;
+} __attribute__((__packed__));
+typedef struct LVMessageSetMenuSettings LVMessageSetMenuSettings;
+
+struct LVMessageSetVibrate {
+    LVMessageHeader header;
+    uint16_t delayTime;
+    uint16_t vibrationTime;
+} __attribute__((__packed__));
+typedef struct LVMessageSetVibrate LVMessageSetVibrate;
+
+struct LVMessageSetStatusBar {
+    LVMessageHeader header;
+    uint8_t unknown1;
+    uint16_t unknown2;
+    uint16_t unreadAlerts;
+    uint16_t unknown4;
+    uint8_t menuItemID;
+    uint8_t unknown6;
+    uint16_t unknown7;
+    uint16_t unknown8;
+    uint16_t unknown9;
+    uint8_t imageData;
+} __attribute__((__packed__));
+typedef struct LVMessageSetStatusBar LVMessageSetStatusBar;
+
+# pragma mark - Enums
 
 typedef enum {
 	kDeviceStatusOff,

@@ -320,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ari Weinstein (8RLNFPYUNZ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -333,6 +334,7 @@
 					"\"$(SRCROOT)/liveview\"",
 				);
 				PRODUCT_NAME = iLiveView;
+				PROVISIONING_PROFILE = "EE6C20C5-C103-43E5-97F6-541F3C4B1A14";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -342,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ari Weinstein (8RLNFPYUNZ)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iLiveView_Prefix.pch;
@@ -353,6 +356,7 @@
 					"\"$(SRCROOT)/liveview\"",
 				);
 				PRODUCT_NAME = iLiveView;
+				PROVISIONING_PROFILE = "EE6C20C5-C103-43E5-97F6-541F3C4B1A14";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;

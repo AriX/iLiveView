@@ -50,19 +50,18 @@
 }
 
 - (IBAction)vibrate {
-	/*NSMutableData *output = [[[NSMutableData alloc] init] autorelease];
-	[output serializeWithFormat:@">HH", 1, 1000];
-	[liveView sendMessage:kMessageSetVibrate withData:output];*/
+	[liveView sendVibrateFor:500 afterDelay:0];
     /*NSMutableData *output = [[[NSMutableData alloc] init] autorelease];
 	[output serializeWithFormat:@">B", kDeviceStatusMenu];
 	[liveView sendMessage:kMessageDeviceStatus withData:output];*/
-    [liveView displayBitmapWithX:0 andY:0 andBitmap:[[[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"music" ofType:@"png"]] autorelease]];
+    
+    //[liveView displayBitmapWithX:0 andY:0 andBitmap:[[[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"music" ofType:@"png"]] autorelease]];
     
     //[liveView setMenuSettingsWithVibration:8 fontSize:12 menuID:3];
 }
 
 - (IBAction)test1 {
-    [liveView setStatusBarWithItem:0 andAlerts:2 andImage:@"logprevu"];
+    [liveView sendSetStatusBarWithItem:0 andAlerts:2 andImage:@"logprevu"];
 }
 
 - (IBAction)test2 {
@@ -77,7 +76,7 @@
 	[liveView sendMessage:kMessageDisplayPanel withData:output];*/
     NSMutableData *output = [[[NSMutableData alloc] init] autorelease];
 	[output serializeWithFormat:@">B", kDeviceStatusOn];
-	[liveView sendMessage:kMessageDeviceStatus withData:output];
+	[liveView sendMessage:kMessageDeviceStatus withNSData:output];
 }
 
 - (IBAction)test3 {
@@ -89,17 +88,15 @@
 }
 
 - (IBAction)resetMenu {
-	[liveView enableMenu];
+	liveView.menuDisabled = NO;
 }
 
 - (IBAction)setMenuZero {
-	[liveView disableMenu];
+	liveView.menuDisabled = YES;
 }
 
 - (IBAction)clearDisplay {
-	NSMutableData *output = [[[NSMutableData alloc] init] autorelease];
-	[output appendString:@""];
-	[liveView sendMessage:kMessageClearDisplay withData:output];
+	[liveView sendMessage:kMessageClearDisplay withString:@""];
 }
 
 - (void)viewDidLoad {

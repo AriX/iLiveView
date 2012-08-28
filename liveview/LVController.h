@@ -29,10 +29,8 @@
 
 @interface LVController : NSObject {
 	int width, height, statusBarWidth, statusBarHeight, viewWidth, viewHeight, announceWidth, announceHeight, textChunkSize, idleTimer, menuItemId, navAction, navType, alertAction, maxBodySize, currentMenuId;
-	BOOL wasInAlert, inMusicMode, disableMenu;
-    NSMutableArray *menuItems;
+	BOOL wasInAlert, inMusicMode;
 	LiveViewStatus_t screenStatus;
-    id<LiveViewDelegate> delegate;
     
     //BTDiscoveryViewController *discoveryView;
 }
@@ -40,27 +38,33 @@
 + (LVController *)sharedInstance;
 
 - (void)processData:(void *)dataPointer length:(size_t)dataLength;
-- (void)sendMessage:(LiveViewMessageType)msg withData:(NSData *)data;
-- (void)sendDisplayPanelWithTopText:(NSString *)topText bottomText:(NSString *)bottomText imageName:(NSString *)bitmapName alertUser:(int)alertUser;
+
+- (void)sendMessage:(void *)message;
+- (void)sendMessage:(LiveViewMessageType)type withData:(const void *)data length:(NSUInteger)length;
+- (void)sendMessage:(LiveViewMessageType)type withNSData:(NSData *)data;
+- (void)sendMessage:(LiveViewMessageType)type withString:(NSString *)string;
+- (void)sendMessage:(LiveViewMessageType)type withInteger:(uint8_t)integer;
+
 - (void)sendGetCaps;
+- (void)sendVibrateFor:(int)miliseconds afterDelay:(int)delayTime;
+- (void)sendSetMenuSettingsWithVibration:(int)vibrationTime fontSize:(int)fontSize menuID:(int)itemID;
+- (void)sendSetStatusBarWithItem:(int)itemID andAlerts:(int)unreadAlerts andImage:(NSString *)imageTitle;
+
+- (void)sendDisplayPanelWithTopText:(NSString *)topText bottomText:(NSString *)bottomText imageName:(NSString *)bitmapName alertUser:(int)alertUser;
 - (void)sendMusicDisplayPanel;
 - (void)sendMenuItem:(int)item;
-- (void)setStatusBarWithItem:(int)itemID andAlerts:(int)unreadAlerts andImage:(NSString *)imageTitle;
 - (void)setScreenModeWithBrightness:(int)brightness andAuto:(int)autoTrue;
-- (void)setMenuSettingsWithVibration:(int)vibrationTime fontSize:(int)fontSize menuID:(int)itemID;
 - (void)setStatus:(NSString *)statusString withExit:(BOOL)exitVisible;
 - (void)setInitialized:(BOOL)initialized;
 - (void)setConnected:(BOOL)connected;
 - (void)displayBitmapWithX:(int)x andY:(int)y andBitmap:(NSData *)bitmapData;
 - (void)notifyWithItem:(int)itemID andAlerts:(int)unreadAlerts andImage:(NSString *)imageTitle;
-- (void)enableMenu;
-- (void)disableMenu;
-- (IBAction)vibrate;
 
 - (id)init;
 - (id)initWithDelegate:(id<LiveViewDelegate>)theDelegate;
 - (NSString *)relativeDate:(NSDate *)date;
 
+@property (nonatomic, assign) BOOL menuDisabled;
 @property (nonatomic, assign) id<LiveViewDelegate> delegate;
 @property (nonatomic, readonly) NSMutableArray *menuItems;
 
