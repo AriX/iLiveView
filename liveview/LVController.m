@@ -8,6 +8,8 @@
 
 #import "LVController.h"
 
+static LVController *LVControllerInstance;
+
 @interface LVController (Private)
 
 - (void)sendData:(void *)data length:(NSUInteger)remainingData;
@@ -26,7 +28,8 @@
 
 @implementation LVController
 
-@synthesize delegate, menuItems;
+@synthesize delegate = _delegate;
+@synthesize menuItems = _menuItems;
 
 #pragma mark - Message receiving and responding
 
@@ -52,10 +55,10 @@
             idleTimer = getCaps->idleTimer;
             
             NSString *softwareVersion = [[NSString alloc] initWithBytes:&getCaps->softwareVersion length:getCaps->versionLength encoding:NSUTF8StringEncoding];
-            [delegate setVersion:softwareVersion];
+            [self.delegate setVersion:softwareVersion];
             [softwareVersion release];
             
-			[self sendSetMenuSize:(self.menuDisabled ? 0 : menuItems.count)];
+			[self sendSetMenuSize:(self.menuDisabled ? 0 : self.menuItems.count)];
 			_menuDisabled = FALSE;
 			break;
             
@@ -100,7 +103,7 @@
                 } else if (navAction == kActionPress && navType == kNavMenuSelect) {
                     [output appendint8:kResultExit];
                     [self sendMessage:kMessageNavigation_Resp withNSData:output];
-                    [[[menuItems objectAtIndex:currentMenuId] itemAtCurrentIndex] sendToPhone];
+                    [[[self.menuItems objectAtIndex:currentMenuId] itemAtCurrentIndex] sendToPhone];
                 } else {
                     [output appendint8:kResultExit];
                     [self sendMessage:kMessageNavigation_Resp withNSData:output];
@@ -115,7 +118,7 @@
             break;
             
 		} case kMessageGetMenuItems:
-            for (i=0; i<[menuItems count]; i++) {
+            for (i=0; i<[self.menuItems count]; i++) {
                 [self sendMenuItem:i];
             }
 			break;
@@ -127,7 +130,7 @@
 			}
 			[output setLength:0];
             currentMenuId = menuItemId;
-            LVMenuItem *menuItem = [menuItems objectAtIndex:menuItemId];
+            LVMenuItem *menuItem = [self.menuItems objectAtIndex:menuItemId];
             switch (alertAction) {
                 case kAlertFirst:
                     menuItem.currentIndex = 0;;
@@ -155,9 +158,9 @@
 			[self sendMessage:kMessageGetAlert_Resp withNSData:output];
 			break;
             
-		case kMessageSetStatusBar_Resp:
+		/*case kMessageSetStatusBar_Resp:
             [self sendSetMenuSettingsWithVibration:5 fontSize:12 menuID:0];
-			break;
+			break;*/
             
 		default:
 			NSLog(@"Message %d with legacyData [%@]\n", type, legacyData);
@@ -166,49 +169,7 @@
     [output release];
 }
 
-- (void)sendMusicDisplayPanel {
-	MPMusicPlayerController *musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
-	MPMediaItem *nowPlayingItem = [musicPlayer nowPlayingItem];
-	NSString *imageName = nil, *titleString, *artist;
-	switch (musicPlayer.playbackState) {
-		case MPMusicPlaybackStatePaused:
-			imageName = @"MusicPlay";
-		case MPMusicPlaybackStatePlaying:
-			artist = [nowPlayingItem valueForProperty:@"artist"];
-			titleString = [nowPlayingItem valueForProperty:@"title"];
-			if (!imageName) imageName = @"MusicPause";
-			break;
-		default:
-			imageName = @"MusicPlay";
-			titleString = @"";
-			artist = @"";
-			break;
-	}
-	[self sendDisplayPanelWithTopText:artist bottomText:titleString imageName:imageName alertUser:0];
-}
-
-- (void)handleScreenStatus {
-    switch (screenStatus) {
-        case kDeviceStatusOff:
-            if (inMusicMode) {
-                inMusicMode = FALSE;
-                [[MPMusicPlayerController iPodMusicPlayer] endGeneratingPlaybackNotifications];
-            }
-            [delegate setScreenStatus:@"Off"];
-            break;
-        case kDeviceStatusOn:
-            [delegate setScreenStatus:@"On"];
-            break;
-        case kDeviceStatusMenu:
-            [delegate setScreenStatus:@"Menu"];
-            break;
-        default:
-            [delegate setScreenStatus:[NSString stringWithFormat:@"%d", screenStatus]];
-            break;
-    }
-}
-
-#pragma mark - Raw sending and receiving
+#pragma mark - Raw data I/O
 
 - (void)processData:(void *)dataPointer length:(size_t)dataLength {
     while (dataLength >= sizeof(LVMessageHeader)) {
@@ -259,7 +220,7 @@
     }
 }
 
-#pragma mark - Message sending
+#pragma mark - Message generation
 
 - (void)sendMessage:(void *)message {
     LVMessageHeader *header = &((LVMessage *)message)->header;
@@ -356,7 +317,7 @@
 }
 
 - (void)sendMenuItem:(int)item {
-    LVMenuItem *menuItem = [menuItems objectAtIndex:item];
+    LVMenuItem *menuItem = [self.menuItems objectAtIndex:item];
     NSMutableData *output = [[NSMutableData alloc] init];
     [output setLength:0];
     [output serializeWithFormat:@">BHHHBBSSS", ([menuItem isAlertItem])?0:1, 0, [menuItem unread], 0, item+3, 0, @"", @"", menuItem.name];
@@ -437,6 +398,27 @@
 
 #pragma Support methods
 
+- (void)handleScreenStatus {
+    switch (screenStatus) {
+        case kDeviceStatusOff:
+            if (inMusicMode) {
+                inMusicMode = FALSE;
+                [[MPMusicPlayerController iPodMusicPlayer] endGeneratingPlaybackNotifications];
+            }
+            [self.delegate setScreenStatus:@"Off"];
+            break;
+        case kDeviceStatusOn:
+            [self.delegate setScreenStatus:@"On"];
+            break;
+        case kDeviceStatusMenu:
+            [self.delegate setScreenStatus:@"Menu"];
+            break;
+        default:
+            [self.delegate setScreenStatus:[NSString stringWithFormat:@"%d", screenStatus]];
+            break;
+    }
+}
+
 - (void)handleMusicAction {
     NSMutableData *output = [[NSMutableData alloc] init];
     if (navAction == kActionLongPress && navType == kNavSelect) {
@@ -476,22 +458,42 @@
     [output release];
 }
 
-- (void)handlePlaybackChange:(id)notification {
-	if (inMusicMode) {
-        [self sendMusicDisplayPanel];
+- (void)sendMusicDisplayPanel {
+	MPMusicPlayerController *musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
+	MPMediaItem *nowPlayingItem = [musicPlayer nowPlayingItem];
+	NSString *imageName = nil, *titleString, *artist;
+	switch (musicPlayer.playbackState) {
+		case MPMusicPlaybackStatePaused:
+			imageName = @"MusicPlay";
+		case MPMusicPlaybackStatePlaying:
+			artist = [nowPlayingItem valueForProperty:@"artist"];
+			titleString = [nowPlayingItem valueForProperty:@"title"];
+			if (!imageName) imageName = @"MusicPause";
+			break;
+		default:
+			imageName = @"MusicPlay";
+			titleString = @"";
+			artist = @"";
+			break;
 	}
+	[self sendDisplayPanelWithTopText:artist bottomText:titleString imageName:imageName alertUser:0];
+}
+
+- (void)handlePlaybackChange:(id)notification {
+	if (inMusicMode)
+        [self sendMusicDisplayPanel];
 }
 
 - (void)setConnected:(BOOL)connected {
-    [delegate setConnected:connected];
+    [self.delegate setConnected:connected];
 }
 
 - (void)setInitialized:(BOOL)initialized {
-    [delegate setInitialized:initialized];
+    [self.delegate setInitialized:initialized];
 }
 
 - (void)setStatus:(NSString *)statusString withExit:(BOOL)exitVisible {
-    [delegate setStatus:statusString withExit:exitVisible];
+    [self.delegate setStatus:statusString withExit:exitVisible];
 }
 
 - (NSString *)pathForImage:(NSString *)image {
@@ -525,142 +527,31 @@
 
 - (id)init {
     self = [self initWithDelegate:nil];
+    
     return self;
 }
 
-- (id)initWithDelegate:(id<LiveViewDelegate>)theDelegate {
+- (id)initWithDelegate:(id<LiveViewDelegate>)delegate {
     self = [super init];
     if (!self)
         return nil;
     
     LVControllerInstance = self;
-    self.delegate = theDelegate;
-    [NSThread detachNewThreadSelector:@selector(startBluetooth) toTarget:self withObject:nil];
+    _delegate = delegate;
+    _menuItems = [[NSMutableArray alloc] init];
+    [NSThread detachNewThreadSelector:@selector(runBluetooth) toTarget:self withObject:nil];
     MPMusicPlayerController *musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(handlePlaybackChange:) name:@"MPMusicPlayerControllerNowPlayingItemDidChangeNotification" object:musicPlayer];
     [notificationCenter addObserver:self selector:@selector(handlePlaybackChange:) name:@"MPMusicPlayerControllerPlaybackStateDidChangeNotification" object:musicPlayer];
-    menuItems = [[NSMutableArray alloc] init];
     
 	return self;
 }
 
-- (void)startBluetooth {
+- (void)runBluetooth {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    
-    initializeBluetooth("6c:23:b9:9b:47:10");
-    
-    /*discoveryView = [[BTDiscoveryViewController alloc] init];
-	[discoveryView setDelegate:self];
-    [[self delegate] presentModalViewController:discoveryView animated:YES];
-	
-    BTstackManager * bt = [BTstackManager sharedInstance];
-	[bt setDelegate:self];
-	[bt addListener:self];
-	[bt addListener:discoveryView];
-    
-	BTstackError err = [bt activate];
-	if (err) NSLog(@"activate err 0x%02x!", err);*/
-    	
+    runBluetooth("6c:23:b9:9b:47:10");
 	[pool drain];
-}
-/*
--(void) btstackManager:(BTstackManager*) manager
-  handlePacketWithType:(uint8_t) packet_type
-			forChannel:(uint16_t) channel
-			   andData:(uint8_t *)packet
-			   withLen:(uint16_t) size
-{
-	//bd_addr_t event_addr;
-    NSLog(@"HANDLE PACKET");
-	
-	switch (packet_type) {
-			
-		case L2CAP_DATA_PACKET:
-			if (packet[0] == 0xa1 && packet[1] == 0x31){
-				[self handleBtDataWithX:packet[4] andY:packet[5] andZ:packet[6]];
-			}
-			break;
-			
-            
-		case HCI_EVENT_PACKET:
-			
-			switch (packet[0]){
-                    
-				case HCI_EVENT_COMMAND_COMPLETE:
-					if ( COMMAND_COMPLETE_EVENT(packet, hci_write_authentication_enable) ) {
-                        // connect to device
-                        bt_send_cmd(&l2cap_create_channel, [device address], PSM_HID_CONTROL);
-					}
-					break;
-                    
-				case HCI_EVENT_PIN_CODE_REQUEST:
-					bt_flip_addr(event_addr, &packet[2]);
-					if (BD_ADDR_CMP([device address], event_addr)) break;
-                    
-					// inform about pin code request
-					NSLog(@"HCI_EVENT_PIN_CODE_REQUEST\n");
-					bt_send_cmd(&hci_pin_code_request_reply, event_addr, 6,  &packet[2]); // use inverse bd_addr as PIN
-					break;
-                    
-				case L2CAP_EVENT_CHANNEL_OPENED:
-					if (packet[2] == 0) {
-						// inform about new l2cap connection
-						bt_flip_addr(event_addr, &packet[3]);
-						uint16_t psm = READ_BT_16(packet, 11); 
-						uint16_t source_cid = READ_BT_16(packet, 13); 
-                        uint16_t dest_cid   = READ_BT_16(packet, 15);
-						wiiMoteConHandle = READ_BT_16(packet, 9);
-						NSLog(@"Channel successfully opened: handle 0x%02x, psm 0x%02x, source cid 0x%02x, dest cid 0x%02x",
-							  wiiMoteConHandle, psm, source_cid, dest_cid);
-						if (psm == PSM_HID_CONTROL) {
-							// control channel openedn succesfully, now open interrupt channel, too.
-                            hidControl = source_cid;
-							bt_send_cmd(&l2cap_create_channel, event_addr, PSM_HID_INTERRUPT);
-						} else {
-							// request acceleration data.. 
-                            hidInterrupt = source_cid;
-							uint8_t setMode31[] = { 0xa2, 0x12, 0x00, 0x31 };
-							bt_send_l2cap( hidInterrupt, setMode31, sizeof(setMode31));
-							uint8_t setLEDs[] = { 0xa2, 0x11, 0x10 };
-							bt_send_l2cap( hidInterrupt, setLEDs, sizeof(setLEDs));
-							// start demo
-							[self startDemo];
-						}
-					}
-					break;
-					
-				default:
-					break;
-			}
-			break;
-			
-		default:
-			break;
-	}
-}
-	
--(void) activatedBTstackManager:(BTstackManager*) manager {
-	NSLog(@"activated!");
-	[[BTstackManager sharedInstance] startDiscovery];
-}
-
--(void) btstackManager:(BTstackManager*)manager deviceInfo:(BTDevice*)newDevice {
-	NSLog(@"Device Info: addr %@ name %@ COD 0x%06x", [newDevice addressString], [newDevice name], [newDevice classOfDevice] ); 
-	if ([newDevice name] && [[newDevice name] hasPrefix:@"Nintendo RVL-CNT-01"]){
-		NSLog(@"WiiMote found with address %@", [newDevice addressString]);
-		//device = newDevice;
-		[[BTstackManager sharedInstance] stopDiscovery];
-	}
-}
-
--(void) discoveryStoppedBTstackManager:(BTstackManager*) manager {
-	NSLog(@"discoveryStopped!");
-	bt_send_cmd(&hci_write_authentication_enable, 0);
-}*/
-
-+ (LVController *)sharedInstance {
-	return LVControllerInstance;
 }
 
 - (void)dealloc {
@@ -670,6 +561,10 @@
     [notificationCenter removeObserver:self name:@"MPMusicPlayerControllerPlaybackStateDidChangeNotification" object:musicPlayer];
     
     [super dealloc];
+}
+
++ (LVController *)sharedInstance {
+	return LVControllerInstance;
 }
 
 @end

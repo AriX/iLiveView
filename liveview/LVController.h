@@ -61,7 +61,7 @@
 - (void)notifyWithItem:(int)itemID andAlerts:(int)unreadAlerts andImage:(NSString *)imageTitle;
 
 - (id)init;
-- (id)initWithDelegate:(id<LiveViewDelegate>)theDelegate;
+- (id)initWithDelegate:(id<LiveViewDelegate>)delegate;
 - (NSString *)relativeDate:(NSDate *)date;
 
 @property (nonatomic, assign) BOOL menuDisabled;
@@ -70,6 +70,5 @@
 
 @end
 
-LVController *LVControllerInstance;
 void LVSendRawData(uint8_t *data, uint16_t len);
-void initializeBluetooth(char *MACAddr);
+void runBluetooth(char *MACAddr);
