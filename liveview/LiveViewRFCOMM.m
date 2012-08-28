@@ -61,9 +61,9 @@ void packet_handler(uint8_t packet_type, uint16_t channel, uint8_t *packet, uint
 	
 	switch (packet_type) {
 		case RFCOMM_DATA_PACKET:
-			printf("Received RFCOMM data on channel id %u, size %u\n", channel, size);
-			hexdump(packet, size);
-            [LVControllerInstance processData:&packet[0] length:size];
+			//printf("Received RFCOMM data on channel id %u, size %u\n", channel, size);
+			//hexdump(packet, size);
+            [LVControllerInstance processData:packet length:size];
 			break;
 			
 		case HCI_EVENT_PACKET:
