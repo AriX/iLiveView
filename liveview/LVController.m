@@ -30,6 +30,7 @@ static LVController *LVControllerInstance;
 
 @synthesize delegate = _delegate;
 @synthesize menuItems = _menuItems;
+@synthesize menuDisabled = _menuDisabled;
 
 #pragma mark - Message receiving and responding
 
